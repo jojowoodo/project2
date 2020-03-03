@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="361fe768-f092-4afa-bdf3-eb09c22367ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project2/src/com/company/readin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project2/src/com/company/Language.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/com/company/readin.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/readin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +33,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../INLÄMNINGSUPPGIFT 5/Inuppgift 1v2" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -42,6 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583142635312</updated>
       <workItem from="1583142637636" duration="1440000" />
+      <workItem from="1583220535278" duration="1468000" />
     </task>
     <servers />
   </component>
@@ -49,9 +56,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1583145994334">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583220637134">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
+    <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1583220637134" />
+    <state x="648" y="267" key="FileChooserDialogImpl" timestamp="1583221983816">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="648" y="267" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1583221983816" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583145994334" />
+    <state x="320" y="79" key="SettingsEditor" timestamp="1583220925540">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="320" y="79" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1583220925540" />
+    <state x="649" y="422" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583222010303">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="649" y="422" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1583222010303" />
   </component>
 </project>

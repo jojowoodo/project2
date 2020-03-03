@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 //Kopiera från bankappen
 public class readin {
-    public static HashMap<Integer> openFromFile() {
+    /*public static HashMap<Integer> openFromFile() {
 
 
         try {
@@ -27,5 +27,5 @@ public class readin {
 
 
         return null;
-    }
+    }*/
 }
