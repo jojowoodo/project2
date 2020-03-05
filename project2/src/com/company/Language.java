@@ -10,7 +10,7 @@ public class Language {
 
 
     String finskaText;
-    Language finnish = new Language()
+    Language finnish = new Language();
 
 
 
