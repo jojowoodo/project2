@@ -8,29 +8,28 @@ import java.util.HashMap;
 public class FileInput {
 
 
-    public static String readFile(String URL)
+    public static String readFile(String textFile){
 
        String text = new String();
-        try {
 
-            FileInputStream f = new FileInputStream(new File(URL));
-            int tempChar;
-            while((tempChar = f.read()) != -1) {
+    try {
 
-                text += String.valueOf((char)tempChar);
-            }
+        FileInputStream f = new FileInputStream(new File(textFile));
+        int tempChar;
+        while ((tempChar = f.read()) != -1) {
 
-
-
-        } catch (FileNotFoundException e) {
-            System.out.println("Kunde inte öppna filen 'AccountDb");
-        } catch (IOException e) {
-            System.out.println("IOException!!! " + e);
-        } catch (ClassNotFoundException e) {
-            System.out.println("ClassNotFoundException bad luck");
+            text += String.valueOf((char) tempChar);
         }
 
 
+    }
+         catch (FileNotFoundException ex ){
+            System.out.println("File was not found: " + ex.getMessage());
+        } catch (IOException ex){
+            System.out.println("IOException " + ex.getMessage());
+
+        }
         return text;
     }
 }
+
