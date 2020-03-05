@@ -1,5 +1,7 @@
 package com.company;
 
+
+
 public class Main {
 
     public static void main(String[] args) {
@@ -18,18 +20,18 @@ public class Main {
         System.out.println(FileInput.readFile("Norsk.txt"));
         System.out.println(FileInput.readFile("Suomi.txt"));
         System.out.println(FileInput.readFile("Svenska.txt")); */
-      Language Finnish =  new Language(FileInput.readFile("Suomi.txt").replaceAll("\\s", ""), "Finnish");
-        new Language(FileInput.readFile("English.txt").replaceAll("\\s", ""), "English");
-        new Language(FileInput.readFile("Deutch.txt").replaceAll("\\s", ""), "Deutch");
-        new Language(FileInput.readFile("Eesti.txt").replaceAll("\\s", ""), "Eesti");
-        new Language(FileInput.readFile("Francais.txt").replaceAll("\\s", ""), "Francais");
-        new Language(FileInput.readFile("Italiano.txt").replaceAll("\\s", ""), "Italiano");
-        new Language(FileInput.readFile("Norsk.txt").replaceAll("\\s", ""), "Norsk");
-        new Language(FileInput.readFile("Suomi.txt").replaceAll("\\s", ""), "Suomi");
+      Language Finnish =  new Language(FileInput.readFile("Suomi.txt").replaceAll("[\\PL]", "").toLowerCase(), "Finnish");
+      Language English  = new Language(FileInput.readFile("English.txt").replaceAll("[\\PL]", "").toLowerCase(), "English");
+      Language Deutsch = new Language(FileInput.readFile("Deutch.txt").replaceAll("[\\PL]", "").toLowerCase(), "Deutsch");
+      Language Eesti = new Language(FileInput.readFile("Eesti.txt").replaceAll("[\\PL]", "").toLowerCase(), "Eesti");
+      Language Frenc =  new Language(FileInput.readFile("Francais.txt").replaceAll("[\\PL]", "").toLowerCase(), "French");
+      Language Italian = new Language(FileInput.readFile("Italiano.txt").replaceAll("[\\PL]", "").toLowerCase(), "Italian");
+      Language Norwegian =  new Language(FileInput.readFile("Norsk.txt").replaceAll("[\\PL]", "").toLowerCase(), "Norwegian");
+
         new Language(FileInput.readFile("Svenska.txt").replaceAll("\\s", ""), "Svenska");
 
-        System.out.println(Finnish.getContent());
 
+         Finnish.calculateCharDistribution(Finnish.getContent());
     }
 
 
