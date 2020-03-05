@@ -16,8 +16,8 @@ public class Language {
 
     public void calculateCharDistribution() {
 
-        new Language(FileInput.readFile("Suomi.txt").replaceAll("\\f",""),"Finnish");
-        new Language(FileInput.readFile("English.txt").replaceAll("\\e",""),"English");
+
+
 
     }
 

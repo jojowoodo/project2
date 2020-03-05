@@ -100,7 +100,13 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1583394873150</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="Fixa till att alla languages läses in i main;">
+      <created>1583395624096</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1583395624096</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +128,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixar på FileInput" />
     <MESSAGE value="Skapade en contructor samt calcchardist" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skapade en contructor samt calcchardist" />
+    <MESSAGE value="Fixa till att alla languages läses in i main;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixa till att alla languages läses in i main;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583220637134">

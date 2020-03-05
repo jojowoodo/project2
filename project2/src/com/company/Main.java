@@ -18,15 +18,16 @@ public class Main {
         System.out.println(FileInput.readFile("Norsk.txt"));
         System.out.println(FileInput.readFile("Suomi.txt"));
         System.out.println(FileInput.readFile("Svenska.txt"));
-        new Language(FileInput.readFile("Suomi.txt").replaceAll("\\f", ""), "Finnish");
-        new Language(FileInput.readFile("English.txt").replaceAll("\\e", ""), "English");
-        new Language(FileInput.readFile("Suomi.txt").replaceAll("\\f", ""), "Deutch");
-        new Language(FileInput.readFile("English.txt").replaceAll("\\e", ""), "Eesti");
-        new Language(FileInput.readFile("Suomi.txt").replaceAll("\\f", ""), "Francais");
-        new Language(FileInput.readFile("English.txt").replaceAll("\\e", ""), "Italiano");
-        new Language(FileInput.readFile("Suomi.txt").replaceAll("\\f", ""), "Norsk");
-        new Language(FileInput.readFile("English.txt").replaceAll("\\e", ""), "Suomi");
-        new Language(FileInput.readFile("Suomi.txt").replaceAll("\\f", ""), "Svenska");
+        new Language(FileInput.readFile("Suomi.txt").replaceAll("\\s", ""), "Finnish");
+        new Language(FileInput.readFile("English.txt").replaceAll("\\s", ""), "English");
+        new Language(FileInput.readFile("Deutch.txt").replaceAll("\\s", ""), "Deutch");
+        new Language(FileInput.readFile("Eesti.txt").replaceAll("\\s", ""), "Eesti");
+        new Language(FileInput.readFile("Francais.txt").replaceAll("\\s", ""), "Francais");
+        new Language(FileInput.readFile("Italiano.txt").replaceAll("\\s", ""), "Italiano");
+        new Language(FileInput.readFile("Norsk.txt").replaceAll("\\s", ""), "Norsk");
+        new Language(FileInput.readFile("Suomi.txt").replaceAll("\\s", ""), "Suomi");
+        new Language(FileInput.readFile("Svenska.txt").replaceAll("\\s", ""), "Svenska");
+
     }
 
 
