@@ -4,7 +4,6 @@
     <list default="true" id="29aa0780-d5c7-4d40-a7c7-097aa91d2129" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Language.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Language.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project2/src/com/company/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/Language.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,7 +118,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1583397482898</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="kommer nu ut en lista på alla bokstäver, räkna totala mängden bokstäver next och sedan fördelningen">
+      <created>1583398479376</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1583398479376</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +149,8 @@
     <MESSAGE value="Fixa till att alla languages läses in i main;" />
     <MESSAGE value="getContent i Language" />
     <MESSAGE value="fixade alla språks variabler och regex allt utom unicode" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixade alla språks variabler och regex allt utom unicode" />
+    <MESSAGE value="kommer nu ut en lista på alla bokstäver, räkna totala mängden bokstäver next och sedan fördelningen" />
+    <option name="LAST_COMMIT_MESSAGE" value="kommer nu ut en lista på alla bokstäver, räkna totala mängden bokstäver next och sedan fördelningen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583220637134">

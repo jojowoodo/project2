@@ -6,6 +6,7 @@ public class Language {
     String content;
     String languageLabel;
     HashMap <String, Double> charDistribution = new HashMap<>();
+    HashMap<Character, Integer> charCountMap = new HashMap<>();
 
 
    public Language(String c, String l) {
@@ -20,11 +21,12 @@ public class Language {
     }
 
     public void calculateCharDistribution(String inputString) {
-
+        double total = 0;
 
         // Creating a HashMap containing char
         // as a key and occurrences as  a value
-        HashMap<Character, Integer> charCountMap = new HashMap<>();
+
+
 
         // Converting given string to char array
 
@@ -47,9 +49,19 @@ public class Language {
         }
 
         // Printing the charCountMap
+
         for (HashMap.Entry entry : charCountMap.entrySet()) {
+            total += (double) entry.getValue();
             System.out.println(entry.getKey() + " " + entry.getValue());
+
+
         }
+        for (HashMap.Entry entry : charCountMap.entrySet()) {
+            System.out.println( charDistribution.put(entry.getKey().toString(),((double)entry.getValue()/total)));
+        }
+
+
+
 
 
 
