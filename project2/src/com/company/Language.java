@@ -1,4 +1,6 @@
 package com.company;
+import com.sun.jdi.Value;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -52,8 +54,7 @@ public class Language {
         }
 
 
-
-
+        System.out.println(content);
 
     }
 
