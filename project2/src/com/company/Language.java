@@ -24,7 +24,7 @@ public class Language {
 
         // Creating a HashMap containing char
         // as a key and occurrences as  a value
-        HashMap<Character, Integer> charCountMap = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> charCountMap = new HashMap<>();
 
         // Converting given string to char array
 
@@ -47,9 +47,14 @@ public class Language {
         }
 
         // Printing the charCountMap
-        for (Map.Entry entry : charCountMap.entrySet()) {
+        for (HashMap.Entry entry : charCountMap.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
+
+
+
+
+
     }
 
 
