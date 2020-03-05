@@ -5,17 +5,22 @@ import java.util.HashMap;
 
 
 //Kopiera från bankappen
-public class readin {
-    /*public static HashMap<Integer> openFromFile() {
+public class FileInput {
 
 
+    public static String readFile(String URL)
+
+       String text = new String();
         try {
 
-            FileInputStream fIn = new FileInputStream(new File("AccountDb"));
-            ObjectInputStream oIn = new ObjectInputStream(fIn);
-            HashMap<Integer, Account> bankarropen = (HashMap<Integer, Account>) oIn.readObject();
+            FileInputStream f = new FileInputStream(new File(URL));
+            int tempChar;
+            while((tempChar = f.read()) != -1) {
 
-            return bankarropen;
+                text += String.valueOf((char)tempChar);
+            }
+
+
 
         } catch (FileNotFoundException e) {
             System.out.println("Kunde inte öppna filen 'AccountDb");
@@ -26,6 +31,6 @@ public class readin {
         }
 
 
-        return null;
-    }*/
+        return text;
+    }
 }
