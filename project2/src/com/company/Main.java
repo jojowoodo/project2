@@ -11,7 +11,9 @@ public class Main {
     public static void TestRun(){
 
         System.out.println(FileInput.readFile("English.txt"));
+        new Language(FileInput.readFile("English.txt").replaceAll("\\e",""),"English");
     }
+
 
 
 }

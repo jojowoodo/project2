@@ -7,15 +7,19 @@ public class Language {
     HashMap <String, Double> charDistribution = new HashMap<>();
 
 
+   public Language(String c, String l) {
+
+       content = c;
+       languageLabel = l;
+
+    }
+
+    public void calculateCharDistribution() {
+
+    }
 
 
-    String finskaText;
-    Language finnish = new Language();
-
-
-
-
-
+    //Language finnish = new Language();
 
 
 
