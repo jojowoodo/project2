@@ -14,6 +14,10 @@ public class Language {
 
     }
 
+    public String getContent(){
+       return content;
+    }
+
     public void calculateCharDistribution() {
 
 
@@ -22,7 +26,7 @@ public class Language {
     }
 
 
-    //Language finnish = new Language();
+
 
 
 
