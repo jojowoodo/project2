@@ -13,10 +13,12 @@ public class Main {
 
         String userlangIn = userIn.nextLine();
 
-        Language userL = new Language(userlangIn, null);
+        Language userinL = new Language(userlangIn.replaceAll("[\\PL]","").toLowerCase(), null);
 
-        System.out.println("Ditt språk är högst antagligen: " + userL.getContent());
+        //System.out.println("Ditt språk är högst antagligen: " + userinL.getContent());
 
+
+        LanguageStats.addLanguage(userinL);
 
         //TestRun();
 

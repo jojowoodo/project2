@@ -22,7 +22,7 @@ public class Language {
        return content;
     }
 
-    public void calculateCharDistribution(String inputString) {
+    public HashMap <String, Double>  calculateCharDistribution(String inputString) {
         Integer total = 0;
 
         // Creating a HashMap containing char
@@ -65,7 +65,7 @@ public class Language {
             System.out.println(entry.getKey()+ " " +entry.getValue());
         }
 
-
+        return charDistribution;
     }
 
 
