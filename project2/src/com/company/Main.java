@@ -1,4 +1,5 @@
 package com.company;
+import java.util.Scanner;
 
 
 
@@ -6,9 +7,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        TestRun();
-    }
+        Scanner userIn = new Scanner(System.in);
 
+        System.out.println("Var så vänlig å mata in en text för att jämföra det med ett språk.");
+
+        String userlangIn = userIn.nextLine();
+
+        Language userL = new Language(userlangIn, null);
+
+        System.out.println("Ditt språk är högst antagligen: " + userL.getContent());
+
+
+        //TestRun();
+
+    }
 
     public static void TestRun() {
 
@@ -33,6 +45,8 @@ public class Main {
         System.out.println(FileInput.readFile("Suomi.txt"));
          Suomi.calculateCharDistribution(Suomi.getContent());
     }
+
+
 
 
 }
