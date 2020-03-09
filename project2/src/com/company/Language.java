@@ -23,7 +23,7 @@ public class Language {
     }
 
     public void calculateCharDistribution(String inputString) {
-        double total = 0;
+        Integer total = 0;
 
         // Creating a HashMap containing char
         // as a key and occurrences as  a value
@@ -53,20 +53,18 @@ public class Language {
         // Printing the charCountMap
 
         for (HashMap.Entry entry : charCountMap.entrySet()) {
-            total += (double) entry.getValue();
-            System.out.println(entry.getKey() + " " + entry.getValue());
-
-
+            total += (Integer) entry.getValue();
         }
+
         for (HashMap.Entry entry : charCountMap.entrySet()) {
-            System.out.println( charDistribution.put(entry.getKey().toString(),((double)entry.getValue()/total)));
+          Integer temp = (Integer) entry.getValue();
+            charDistribution.put(entry.getKey().toString(),(double)temp/(double)total);
         }
 
+        for (HashMap.Entry entry : charDistribution.entrySet()) {
+            System.out.println(entry.getKey()+ " " +entry.getValue());
+        }
 
-
-
-
-        System.out.println(content);
 
     }
 
