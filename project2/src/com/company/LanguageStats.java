@@ -17,7 +17,15 @@ import java.util.HashMap;
        Language Frenc =  new Language(FileInput.readFile("Francais.txt").replaceAll("[\\PL]", "").toLowerCase(), "French");
        Language Italian = new Language(FileInput.readFile("Italiano.txt").replaceAll("[\\PL]", "").toLowerCase(), "Italian");
        Language Norwegian =  new Language(FileInput.readFile("Norsk.txt").replaceAll("[\\PL]", "").toLowerCase(), "Norwegian");
-       Languages.add(Svenska.content);
+       Languages.add(Svenska);
+       Languages.add(English);
+       Languages.add(Suomi);
+       Languages.add(Deutsch);
+       Languages.add(Eesti);
+       Languages.add(Frenc);
+       Languages.add(Italian);
+       Languages.add(Norwegian);
+
        System.out.println(Languages);
 
        //addLang.calculateCharDistribution(addLang.getContent());
