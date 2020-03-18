@@ -18,9 +18,10 @@ public class Main {
         //System.out.println("Ditt språk är högst antagligen: " + userinL.getContent());
 
 
-        LanguageStats.addLanguage(userinL);
+       // LanguageStats.addLanguage(userinL);
 
         //TestRun();
+
 
     }
 

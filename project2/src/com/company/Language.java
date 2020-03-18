@@ -22,7 +22,7 @@ public class Language {
         return content;
     }
 
-    public HashMap<String, Double> calculateCharDistribution(String inputString) {
+    public  HashMap<String, Double> calculateCharDistribution(String inputString) {
         Integer total = 0;
 
         // Creating a HashMap containing char
