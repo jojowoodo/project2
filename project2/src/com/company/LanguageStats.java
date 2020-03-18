@@ -71,10 +71,10 @@ public class LanguageStats {
 
          }
        // double lowest = 1;
-       //  for (int i = 0; i < resultArray.size(); i++){
+         for (int i = 0; i < resultArray.size(); i++){
            // if(resultArray.get(i) > lowest)
-          //   resultArray.get(i);
-        // }
+             System.out.println(resultArray.get(i));
+         }
 
 
      }
