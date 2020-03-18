@@ -46,7 +46,7 @@ public class LanguageStats {
          Language userinL = new Language(userlangIn.replaceAll("[\\PL]","").toLowerCase(), null);
 
          double totalDiff = 0;
-         double lowest = 1;
+
          ArrayList <Double> resultArray = new ArrayList<>();
          for (int i = 0; i < guessArray.size(); i++) {
 
@@ -57,17 +57,24 @@ public class LanguageStats {
                for (String j : LoopHash.keySet()) {
                    if(userHash.get(j) == null){
                     totalDiff += Math.pow(LoopHash.get(j) - 0,2);
+
                    }
                    else {
                        totalDiff += Math.pow(LoopHash.get(j) - userHash.get(j), 2);
                    }
                }
-                if(totalDiff < lowest) {
-                    lowest = totalDiff;
-                }
-             System.out.println(guessArray.get(i).getLanguageLabel() + " " + totalDiff + " " + lowest);
+               resultArray.add(totalDiff);
+               totalDiff = 0;
+
+
+
 
          }
+       // double lowest = 1;
+       //  for (int i = 0; i < resultArray.size(); i++){
+           // if(resultArray.get(i) > lowest)
+          //   resultArray.get(i);
+        // }
 
 
      }
