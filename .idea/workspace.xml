@@ -41,7 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="H:/Algorithm/INLÄMNINGSUPPGIFT 5/Inuppgift 1v2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../INLÄMNINGSUPPGIFT 5/Inuppgift 1v2" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -90,6 +90,7 @@
       <updated>1583142635312</updated>
       <workItem from="1583142637636" duration="1440000" />
       <workItem from="1583220535278" duration="1468000" />
+      <workItem from="1584518163447" duration="5559000" />
     </task>
     <task id="LOCAL−00001" summary="fixar på FileInput">
       <created>1583393315701</created>
@@ -133,13 +134,7 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1583405044818</updated>
     </task>
-    <task id="LOCAL−00008" summary="Matade in user input">
-      <created>1583740554538</created>
-      <option name="number" value="LOCAL−00008" />
-      <option name="presentableId" value="LOCAL−00008" />
-      <updated>1583740554538</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,8 +161,7 @@
     <MESSAGE value="fixade alla språks variabler och regex allt utom unicode" />
     <MESSAGE value="kommer nu ut en lista på alla bokstäver, räkna totala mängden bokstäver next och sedan fördelningen" />
     <MESSAGE value="bla bla bla error" />
-    <MESSAGE value="Matade in user input" />
-    <option name="LAST_COMMIT_MESSAGE" value="Matade in user input" />
+    <option name="LAST_COMMIT_MESSAGE" value="bla bla bla error" />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583220637134">

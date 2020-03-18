@@ -7,27 +7,26 @@ import java.util.Map;
 public class Language {
     String content;
     String languageLabel;
-    HashMap <String, Double> charDistribution = new HashMap<>();
+    HashMap<String, Double> charDistribution = new HashMap<>();
     HashMap<Character, Integer> charCountMap = new HashMap<>();
 
 
-   public Language(String c, String l) {
+    public Language(String c, String l) {
 
-       content = c;
-       languageLabel = l;
+        content = c;
+        languageLabel = l;
 
     }
 
-    public String getContent(){
-       return content;
+    public String getContent() {
+        return content;
     }
 
-    public HashMap <String, Double>  calculateCharDistribution(String inputString) {
+    public HashMap<String, Double> calculateCharDistribution(String inputString) {
         Integer total = 0;
 
         // Creating a HashMap containing char
         // as a key and occurrences as  a value
-
 
 
         // Converting given string to char array
@@ -41,8 +40,7 @@ public class Language {
                 // If char is present in charCountMap,
                 // incrementing it's count by 1
                 charCountMap.put(c, charCountMap.get(c) + 1);
-            }
-            else {
+            } else {
 
                 // If char is not present in charCountMap,
                 // putting this char to charCountMap with 1 as it's value
@@ -57,17 +55,16 @@ public class Language {
         }
 
         for (HashMap.Entry entry : charCountMap.entrySet()) {
-          Integer temp = (Integer) entry.getValue();
-            charDistribution.put(entry.getKey().toString(),(double)temp/(double)total);
+            Integer temp = (Integer) entry.getValue();
+            charDistribution.put(entry.getKey().toString(), (double) temp / (double) total);
         }
 
         for (HashMap.Entry entry : charDistribution.entrySet()) {
-            System.out.println(entry.getKey()+ " " +entry.getValue());
+            System.out.println(entry.getKey() + " " + entry.getValue());
         }
 
         return charDistribution;
     }
-
 
 
 }
