@@ -3,6 +3,7 @@ package com.company;
 import java.util.ArrayList;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Scanner;
 
 public class LanguageStats {
@@ -29,13 +30,13 @@ public class LanguageStats {
          Languages.add(Italian);
          Languages.add(Norwegian);
 
-         System.out.println(Languages);
 
          return Languages;
      }
 
      public static  void guessLanguage() {
          ArrayList<Language> guessArray = addLanguage();
+
 
          Scanner userIn = new Scanner(System.in);
 
@@ -47,7 +48,7 @@ public class LanguageStats {
 
          double totalDiff = 0;
 
-         ArrayList <Double> resultArray = new ArrayList<>();
+         LinkedHashMap<String, Double> resultHash = new LinkedHashMap<>();
          for (int i = 0; i < guessArray.size(); i++) {
 
              HashMap <String, Double> userHash = userinL.calculateCharDistribution(userinL.getContent());
@@ -63,20 +64,23 @@ public class LanguageStats {
                        totalDiff += Math.pow(LoopHash.get(j) - userHash.get(j), 2);
                    }
                }
-               resultArray.add(totalDiff);
+               resultHash.put(guessArray.get(i).getLanguageLabel(),totalDiff);
                totalDiff = 0;
 
 
 
 
+
+
          }
-       // double lowest = 1;
-         for (int i = 0; i < resultArray.size(); i++){
-           // if(resultArray.get(i) > lowest)
-             System.out.println(resultArray.get(i));
+
+         for (HashMap.Entry entry : resultHash.entrySet()) {
+             System.out.println(entry.getKey() +" "+ entry.getValue());
          }
 
 
      }
 
- }
+
+
+}
