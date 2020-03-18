@@ -33,10 +33,12 @@ import java.util.HashMap;
        //Svenska.calculateCharDistribution(Svenska.getContent());
 
    }
-    /*public guessLanguage(Language String){
-        for(Main.)
+     public static void guessLanguage(){
+         ArrayList guessArray = addLanguage();
 
+         for (int i = 0; i < guessArray.size(); i++ ){
+             //   guessArray.get(i).calculateCharDistribution();
 
-       return;
-    }*/
-}
+         }
+
+     }
