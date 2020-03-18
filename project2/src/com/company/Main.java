@@ -7,20 +7,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner userIn = new Scanner(System.in);
-
-        System.out.println("Var så vänlig å mata in en text för att jämföra det med ett språk.");
-
-        String userlangIn = userIn.nextLine();
-
-        Language userinL = new Language(userlangIn.replaceAll("[\\PL]","").toLowerCase(), null);
-
-        //System.out.println("Ditt språk är högst antagligen: " + userinL.getContent());
 
 
-       // LanguageStats.addLanguage(userinL);
 
-        //TestRun();
+
+
 
 
     }

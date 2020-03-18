@@ -2,8 +2,9 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
- public class LanguageStats {
+public class LanguageStats {
      HashMap<String, Language> languages = new HashMap<>();
      public ArrayList<Language> Languages = new ArrayList();
 
@@ -34,6 +35,15 @@ import java.util.HashMap;
 
      public  void guessLanguage() {
          ArrayList<Language> guessArray = addLanguage();
+
+         Scanner userIn = new Scanner(System.in);
+
+         System.out.println("Var så vänlig å mata in en text för att jämföra det med ett språk.");
+
+         String userlangIn = userIn.nextLine();
+
+         Language userinL = new Language(userlangIn.replaceAll("[\\PL]","").toLowerCase(), null);
+
 
          for (int i = 0; i < guessArray.size(); i++) {
              guessArray.get(i).calculateCharDistribution(guessArray.get(i).getContent());
