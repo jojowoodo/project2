@@ -5,9 +5,9 @@ import java.util.HashMap;
 
  public class LanguageStats {
      HashMap<String, Language> languages = new HashMap<>();
-     public ArrayList Languages = new ArrayList();
+     public ArrayList<Language> Languages = new ArrayList();
 
-     public ArrayList addLanguage() {
+     public ArrayList<Language> addLanguage() {
 
 
          Language Svenska = new Language(FileInput.readFile("Svenska.txt").replaceAll("[\\PL]", "").toLowerCase(), "Swedish");
@@ -33,10 +33,10 @@ import java.util.HashMap;
      }
 
      public  void guessLanguage() {
-         ArrayList guessArray = addLanguage();
+         ArrayList<Language> guessArray = addLanguage();
 
          for (int i = 0; i < guessArray.size(); i++) {
-             System.out.println(guessArray.get(i));
+             guessArray.get(i).calculateCharDistribution(guessArray.get(i).getContent());
 
          }
 

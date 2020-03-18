@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="29aa0780-d5c7-4d40-a7c7-097aa91d2129" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/com/company/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/Language.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project2/src/com/company/LanguageStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/LanguageStats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584525202894</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="jaa2">
+      <created>1584525657629</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1584525657629</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,17 +180,18 @@
     <MESSAGE value="bla bla bla error" />
     <MESSAGE value="addlanguage kodning" />
     <MESSAGE value="jaa" />
-    <option name="LAST_COMMIT_MESSAGE" value="jaa" />
+    <MESSAGE value="jaa2" />
+    <option name="LAST_COMMIT_MESSAGE" value="jaa2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583220637134">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1583220637134" />
-    <state x="932" y="209" key="CommitChangelistDialog2" timestamp="1584525202017">
+    <state x="932" y="209" key="CommitChangelistDialog2" timestamp="1584525656954">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="932" y="209" key="CommitChangelistDialog2/0.0.2560.1400/2560.203.1920.1040/-1920.190.1280.680@0.0.2560.1400" timestamp="1584525202017" />
+    <state x="932" y="209" key="CommitChangelistDialog2/0.0.2560.1400/2560.203.1920.1040/-1920.190.1280.680@0.0.2560.1400" timestamp="1584525656954" />
     <state x="648" y="267" key="FileChooserDialogImpl" timestamp="1583221983816">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -194,10 +201,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="320" y="79" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1583220925540" />
-    <state x="872" y="430" key="Vcs.Push.Dialog.v2" timestamp="1584525205701">
+    <state x="872" y="430" key="Vcs.Push.Dialog.v2" timestamp="1584525661172">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="430" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.203.1920.1040/-1920.190.1280.680@0.0.2560.1400" timestamp="1584525205701" />
+    <state x="872" y="430" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.203.1920.1040/-1920.190.1280.680@0.0.2560.1400" timestamp="1584525661172" />
     <state x="989" y="585" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584525642033">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
