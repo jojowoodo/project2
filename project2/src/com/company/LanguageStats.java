@@ -1,14 +1,15 @@
 package com.company;
 
 import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class LanguageStats {
-     HashMap<String, Language> languages = new HashMap<>();
-     public ArrayList<Language> Languages = new ArrayList();
 
-     public ArrayList<Language> addLanguage() {
+     public static ArrayList<Language> Languages = new ArrayList();
+
+     public static ArrayList<Language> addLanguage() {
 
 
          Language Svenska = new Language(FileInput.readFile("Svenska.txt").replaceAll("[\\PL]", "").toLowerCase(), "Swedish");
@@ -33,7 +34,7 @@ public class LanguageStats {
          return Languages;
      }
 
-     public  void guessLanguage() {
+     public static  void guessLanguage() {
          ArrayList<Language> guessArray = addLanguage();
 
          Scanner userIn = new Scanner(System.in);
@@ -44,11 +45,30 @@ public class LanguageStats {
 
          Language userinL = new Language(userlangIn.replaceAll("[\\PL]","").toLowerCase(), null);
 
-
+         double totalDiff = 0;
+         double lowest = 1;
+         ArrayList <Double> resultArray = new ArrayList<>();
          for (int i = 0; i < guessArray.size(); i++) {
-             guessArray.get(i).calculateCharDistribution(guessArray.get(i).getContent());
+
+             HashMap <String, Double> userHash = userinL.calculateCharDistribution(userinL.getContent());
+             HashMap<String, Double> LoopHash = guessArray.get(i).calculateCharDistribution(guessArray.get(i).getContent());
+
+
+               for (String j : LoopHash.keySet()) {
+                   if(userHash.get(j) == null){
+                    totalDiff += Math.pow(LoopHash.get(j) - 0,2);
+                   }
+                   else {
+                       totalDiff += Math.pow(LoopHash.get(j) - userHash.get(j), 2);
+                   }
+               }
+                if(totalDiff < lowest) {
+                    lowest = totalDiff;
+                }
+             System.out.println(guessArray.get(i).getLanguageLabel() + " " + totalDiff + " " + lowest);
 
          }
+
 
      }
 

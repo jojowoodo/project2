@@ -21,6 +21,9 @@ public class Language {
     public String getContent() {
         return content;
     }
+    public String getLanguageLabel(){
+        return languageLabel;
+    }
 
     public  HashMap<String, Double> calculateCharDistribution(String inputString) {
         Integer total = 0;
@@ -59,9 +62,9 @@ public class Language {
             charDistribution.put(entry.getKey().toString(), (double) temp / (double) total);
         }
 
-        for (HashMap.Entry entry : charDistribution.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
-        }
+     //   for (HashMap.Entry entry : charDistribution.entrySet()) {
+       //     System.out.println(entry.getKey() + " " + entry.getValue());
+      //  }
 
         return charDistribution;
     }
