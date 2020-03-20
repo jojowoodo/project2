@@ -112,7 +112,7 @@ public class LanguageStats {
     }
 
 
-
+//Felet är att den allitd printar ut samma svar
 
 
 
