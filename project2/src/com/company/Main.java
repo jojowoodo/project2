@@ -5,8 +5,20 @@ import java.util.Scanner;
 
 public class Main {
 
+
+
+
     public static void main(String[] args) {
 
+
+        String s = "Hello ivan my penis is big";
+        char a[] = s.toCharArray();
+
+        for(int i=0; i < a.length; i++) {
+            if(a[i] != ' ' && (i == 0 || a[i-1] == ' ')) {
+                System.out.println(a[i]);
+            }
+        }
 
        LanguageStats.guessLanguage();
       //  LanguageStats.threeletterCombo();
