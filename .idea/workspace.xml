@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="29aa0780-d5c7-4d40-a7c7-097aa91d2129" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/com/company/LanguageStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/LanguageStats.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +92,7 @@
       <workItem from="1584518163447" duration="5874000" />
       <workItem from="1584552440357" duration="1664000" />
       <workItem from="1584635684332" duration="1225000" />
-      <workItem from="1584694883372" duration="6003000" />
+      <workItem from="1584694883372" duration="6618000" />
     </task>
     <task id="LOCAL−00001" summary="fixar på FileInput">
       <created>1583393315701</created>
@@ -198,7 +197,13 @@
       <option name="presentableId" value="LOCAL−00016" />
       <updated>1584699645713</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL−00017" summary="leker runt med lösningar för 3 letter combination v.2">
+      <created>1584703685457</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1584703685457</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +239,8 @@
     <MESSAGE value="guessLanguage typ funkar" />
     <MESSAGE value="guessLanguage typ funkar , loopar ut svaren" />
     <MESSAGE value="leker runt med lösningar för 3 letter combination" />
-    <option name="LAST_COMMIT_MESSAGE" value="leker runt med lösningar för 3 letter combination" />
+    <MESSAGE value="leker runt med lösningar för 3 letter combination v.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="leker runt med lösningar för 3 letter combination v.2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583220637134">

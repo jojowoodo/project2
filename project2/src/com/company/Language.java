@@ -37,17 +37,17 @@ public class Language {
         char[] strArray = inputString.toCharArray();
 
         // checking each char of strArray
-        for (char c : strArray) {
-            if (charCountMap.containsKey(c)) {
+        for (char bokstav : strArray) {
+            if (charCountMap.containsKey(bokstav)) {
 
                 // If char is present in charCountMap,
                 // incrementing it's count by 1
-                charCountMap.put(c, charCountMap.get(c) + 1);
+                charCountMap.put(bokstav, charCountMap.get(bokstav) + 1);
             } else {
 
                 // If char is not present in charCountMap,
                 // putting this char to charCountMap with 1 as it's value
-                charCountMap.put(c, 1);
+                charCountMap.put(bokstav, 1);
             }
         }
 
