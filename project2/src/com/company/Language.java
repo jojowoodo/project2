@@ -65,8 +65,9 @@ public class Language {
      //   for (HashMap.Entry entry : charDistribution.entrySet()) {
        //     System.out.println(entry.getKey() + " " + entry.getValue());
       //  }
-
+        System.out.println(charDistribution);
         return charDistribution;
+
     }
 
 
