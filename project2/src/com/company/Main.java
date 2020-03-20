@@ -9,6 +9,7 @@ public class Main {
 
 
         LanguageStats.guessLanguage();
+        LanguageStats.threeletterCombo();
 
 
 

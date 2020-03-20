@@ -73,27 +73,40 @@ public class LanguageStats {
         }
 
     }
-/*
-    public void threeletterCombo() {
+
+    public static void threeletterCombo() {
 
         LinkedHashMap<String, Integer> theeLetters = new LinkedHashMap();
         String k = "Kalle skäller";
         System.out.println(theeLetters);
+        ArrayList<Language> guessArray2 = addLanguage();
 
 
-
-        for(int j = 1; j++<k.length() - 1;j++) {
+       /* for(int j = 1; j++<k.length() - 1;j++) {
             String s = "kal";
             int i = theeLetters.get(s) + 1;
             theeLetters.put(s,i);
+        } */
+        String text = guessArray2.get(0).getContent();
+        int j = 0;
+        for (int i = 0; i < text.length(); i++) {
+
+            char a = text.charAt(0 + j);
+            char b = text.charAt(1 + j);
+            char c = text.charAt(2 + j);
+            j++;
+            System.out.println(""+a + b  + c);
+
+
         }
 
+    }
 
 
         /*
         for (String i : theeLetters.keySet()) {
             System.out.println("key: " + i + " value: " + theeLetters.get(i));
-        }*/
+        }
 
 
 /*
