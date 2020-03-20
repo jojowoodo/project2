@@ -35,12 +35,10 @@ public class LanguageStats {
     }
 
     public static void guessLanguage() {
+
         ArrayList<Language> guessArray = addLanguage();
 
-
         Scanner userIn = new Scanner(System.in);
-
-
         System.out.println("Var så vänlig å mata in en text för att jämföra det med ett språk.");
 
         //User input läses in
@@ -50,14 +48,12 @@ public class LanguageStats {
         Language userinL = new Language(userlangIn.replaceAll("[\\PL]", "").toLowerCase(), null);
 
         double totalDiff = 0;
-
         LinkedHashMap<String, Double> resultHash = new LinkedHashMap<>();
-        for (int i = 0; i < guessArray.size(); i++) {
 
+        for (int i = 0; i < guessArray.size(); i++) {
 
             HashMap<String, Double> userHash = userinL.calculateCharDistribution(userinL.getContent());
             HashMap<String, Double> LoopHash = guessArray.get(i).calculateCharDistribution(guessArray.get(i).getContent());
-
 
             for (String j : LoopHash.keySet()) {
                 if (userHash.get(j) == null) {
@@ -70,16 +66,14 @@ public class LanguageStats {
             resultHash.put(guessArray.get(i).getLanguageLabel(), totalDiff);
             totalDiff = 0;
 
-
         }
 
-        for (HashMap.Entry entry : resultHash.entrySet()) {
+       for (HashMap.Entry entry : resultHash.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
 
-
     }
-
+/*
     public void threeletterCombo() {
 
         LinkedHashMap<String, Integer> theeLetters = new LinkedHashMap();
@@ -102,7 +96,7 @@ public class LanguageStats {
         }*/
 
 
-
+/*
     }
 
     public class All_Possible_Combinations_5 {
@@ -126,6 +120,5 @@ public class LanguageStats {
             }
 
         }
-
+   */
     }
-}

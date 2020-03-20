@@ -26,45 +26,36 @@ public class Language {
     }
 
     public  HashMap<String, Double> calculateCharDistribution(String inputString) {
+        //totala mängden bokstäver
         Integer total = 0;
 
-        // Creating a HashMap containing char
-        // as a key and occurrences as  a value
 
-
-        // Converting given string to char array
-
+        //Sätter Varje bokstav av inputString i en Array
         char[] strArray = inputString.toCharArray();
 
-        // checking each char of strArray
+        //går igenom varje bokstav av strArray
         for (char bokstav : strArray) {
+            //om vår hashmap redan innehåller bokstaven, incrementeras den bokstaven med 1
             if (charCountMap.containsKey(bokstav)) {
-
-                // If char is present in charCountMap,
-                // incrementing it's count by 1
                 charCountMap.put(bokstav, charCountMap.get(bokstav) + 1);
-            } else {
 
-                // If char is not present in charCountMap,
-                // putting this char to charCountMap with 1 as it's value
+            } else {
+                //ifall bokstaven inte finns ännu, blir sätter vi bokstavsmängden till 1
                 charCountMap.put(bokstav, 1);
             }
         }
 
-
+        //räknar totala mängden av bokstäver i stringen, går igenom hashmappen och lägger till varje mängd av bokstäver
         for (HashMap.Entry entry : charCountMap.entrySet()) {
             total += (Integer) entry.getValue();
         }
-
+        //Lägger till i slutliga hashmappen själva bokstaven som key(string) och procentmängden av bokstaven som value
         for (HashMap.Entry entry : charCountMap.entrySet()) {
             Integer temp = (Integer) entry.getValue();
             charDistribution.put(entry.getKey().toString(), (double) temp / (double) total);
         }
 
-        //for (HashMap.Entry entry : charDistribution.entrySet()) {
-       //     System.out.println(entry.getKey() + " " + entry.getValue());
-      //  }
-        System.out.println(charDistribution);
+        //returnerar en hashmap av teckenfördelningen i procent.
         return charDistribution;
 
     }
