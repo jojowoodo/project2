@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7401aa29-74f1-4c60-bb7d-374cdf23a547" name="Default Changelist" comment="la till lite skit">
+    <list default="true" id="29aa0780-d5c7-4d40-a7c7-097aa91d2129" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Language.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Language.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/com/company/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/Language.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/com/company/LanguageStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/LanguageStats.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project2/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,18 +49,6 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
@@ -77,6 +68,18 @@
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
