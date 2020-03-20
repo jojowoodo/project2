@@ -47,14 +47,19 @@ public class LanguageStats {
         //User input skapas som en language
         Language userinL = new Language(userlangIn.replaceAll("[\\PL]", "").toLowerCase(), null);
         userinL.calculateCharDistributionThreeLetters(userinL.getContent());
+        userinL.calculateCharDistribution(userinL.getContent());
+
 
         double totalDiff = 0;
+         double totalDiff2 = 0;
         LinkedHashMap<String, Double> resultHash = new LinkedHashMap<>();
+        LinkedHashMap<String, Double> resultHash2 = new LinkedHashMap<>();
 
-      /*  for (int i = 0; i < guessArray.size(); i++) {
+        for (int i = 0; i < guessArray.size(); i++) {
 
             HashMap<String, Double> userHash = userinL.calculateCharDistribution(userinL.getContent());
             HashMap<String, Double> LoopHash = guessArray.get(i).calculateCharDistribution(guessArray.get(i).getContent());
+
 
             for (String j : LoopHash.keySet()) {
                 if (userHash.get(j) == null) {
@@ -68,15 +73,51 @@ public class LanguageStats {
             totalDiff = 0;
 
         }
-
-       for (HashMap.Entry entry : resultHash.entrySet()) {
+        for (HashMap.Entry entry : resultHash.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
-  */
+
+
+        System.out.println("\n");
+
+
+
+        ArrayList<Language> guessArray2 = addLanguage();
+
+
+        for (int i = 0; i < guessArray2.size(); i++) {
+
+            HashMap<String, Double> userHash2 = userinL.calculateCharDistributionThreeLetters(userinL.getContent());
+            HashMap<String, Double> LoopHash2 = guessArray2.get(i).calculateCharDistributionThreeLetters(guessArray.get(i).getContent());
+
+
+            for (String j : LoopHash2.keySet()) {
+                if (userHash2.get(j) == null) {
+                    totalDiff2 += Math.pow(LoopHash2.get(j) - 0, 2);
+
+                } else {
+                    totalDiff2 += Math.pow(LoopHash2.get(j) - userHash2.get(j), 2);
+                }
+            }
+            resultHash2.put(guessArray2.get(i).getLanguageLabel(), totalDiff2);
+            totalDiff2 = 0;
+
+
+        }
+
+        for (HashMap.Entry entry : resultHash2.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+
+    }
+
+
+
+
 
 
     }
-}
+
 
 
 
