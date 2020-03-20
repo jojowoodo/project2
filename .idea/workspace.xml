@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="29aa0780-d5c7-4d40-a7c7-097aa91d2129" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Language.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Language.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project2/src/com/company/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/Language.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project2/src/com/company/LanguageStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/LanguageStats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584708052461</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="funderingar">
+      <created>1584708815871</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1584708815871</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,18 +290,19 @@
     <MESSAGE value="En loop som splittar texten i 3 bokstäver o printar ut de" />
     <MESSAGE value="fortsätter" />
     <MESSAGE value="öömm printar ut tretecken kombinationer" />
-    <option name="LAST_COMMIT_MESSAGE" value="öömm printar ut tretecken kombinationer" />
+    <MESSAGE value="funderingar" />
+    <option name="LAST_COMMIT_MESSAGE" value="funderingar" />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583220637134">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1583220637134" />
-    <state x="932" y="209" key="CommitChangelistDialog2" timestamp="1584708051730">
+    <state x="932" y="209" key="CommitChangelistDialog2" timestamp="1584708815203">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="932" y="209" key="CommitChangelistDialog2/0.0.2560.1400/2560.203.1920.1040/-1920.190.1280.680@0.0.2560.1400" timestamp="1584531862573" />
-    <state x="932" y="209" key="CommitChangelistDialog2/2560.203.1920.1040/-1920.190.1280.680/0.0.2560.1400@0.0.2560.1400" timestamp="1584708051730" />
+    <state x="932" y="209" key="CommitChangelistDialog2/2560.203.1920.1040/-1920.190.1280.680/0.0.2560.1400@0.0.2560.1400" timestamp="1584708815203" />
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1584530110757">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -301,26 +312,26 @@
     </state>
     <state x="648" y="267" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1583221983816" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583145994334" />
-    <state width="2517" height="380" key="GridCell.Tab.0.bottom" timestamp="1584707922449">
+    <state width="2517" height="380" key="GridCell.Tab.0.bottom" timestamp="1584710980244">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="380" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.203.1920.1040/-1920.190.1280.680@0.0.2560.1400" timestamp="1584537349557" />
-    <state width="2517" height="380" key="GridCell.Tab.0.bottom/2560.203.1920.1040/-1920.190.1280.680/0.0.2560.1400@0.0.2560.1400" timestamp="1584707922449" />
-    <state width="2517" height="380" key="GridCell.Tab.0.center" timestamp="1584707922449">
+    <state width="2517" height="380" key="GridCell.Tab.0.bottom/2560.203.1920.1040/-1920.190.1280.680/0.0.2560.1400@0.0.2560.1400" timestamp="1584710980244" />
+    <state width="2517" height="380" key="GridCell.Tab.0.center" timestamp="1584710980244">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="380" key="GridCell.Tab.0.center/0.0.2560.1400/2560.203.1920.1040/-1920.190.1280.680@0.0.2560.1400" timestamp="1584537349557" />
-    <state width="2517" height="380" key="GridCell.Tab.0.center/2560.203.1920.1040/-1920.190.1280.680/0.0.2560.1400@0.0.2560.1400" timestamp="1584707922449" />
-    <state width="2517" height="380" key="GridCell.Tab.0.left" timestamp="1584707922449">
+    <state width="2517" height="380" key="GridCell.Tab.0.center/2560.203.1920.1040/-1920.190.1280.680/0.0.2560.1400@0.0.2560.1400" timestamp="1584710980244" />
+    <state width="2517" height="380" key="GridCell.Tab.0.left" timestamp="1584710980243">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="380" key="GridCell.Tab.0.left/0.0.2560.1400/2560.203.1920.1040/-1920.190.1280.680@0.0.2560.1400" timestamp="1584537349557" />
-    <state width="2517" height="380" key="GridCell.Tab.0.left/2560.203.1920.1040/-1920.190.1280.680/0.0.2560.1400@0.0.2560.1400" timestamp="1584707922449" />
-    <state width="2517" height="380" key="GridCell.Tab.0.right" timestamp="1584707922449">
+    <state width="2517" height="380" key="GridCell.Tab.0.left/2560.203.1920.1040/-1920.190.1280.680/0.0.2560.1400@0.0.2560.1400" timestamp="1584710980243" />
+    <state width="2517" height="380" key="GridCell.Tab.0.right" timestamp="1584710980244">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="380" key="GridCell.Tab.0.right/0.0.2560.1400/2560.203.1920.1040/-1920.190.1280.680@0.0.2560.1400" timestamp="1584537349557" />
-    <state width="2517" height="380" key="GridCell.Tab.0.right/2560.203.1920.1040/-1920.190.1280.680/0.0.2560.1400@0.0.2560.1400" timestamp="1584707922449" />
+    <state width="2517" height="380" key="GridCell.Tab.0.right/2560.203.1920.1040/-1920.190.1280.680/0.0.2560.1400@0.0.2560.1400" timestamp="1584710980244" />
     <state x="984" y="408" key="MultipleFileMergeDialog" timestamp="1584705136146">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -329,11 +340,11 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="320" y="79" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1583220925540" />
-    <state x="872" y="430" key="Vcs.Push.Dialog.v2" timestamp="1584707248728">
+    <state x="872" y="430" key="Vcs.Push.Dialog.v2" timestamp="1584709210219">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="872" y="430" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.203.1920.1040/-1920.190.1280.680@0.0.2560.1400" timestamp="1584531865768" />
-    <state x="872" y="430" key="Vcs.Push.Dialog.v2/2560.203.1920.1040/-1920.190.1280.680/0.0.2560.1400@0.0.2560.1400" timestamp="1584707248728" />
+    <state x="872" y="430" key="Vcs.Push.Dialog.v2/2560.203.1920.1040/-1920.190.1280.680/0.0.2560.1400@0.0.2560.1400" timestamp="1584709210219" />
     <state x="956" y="525" key="com.intellij.ide.util.TipDialog" timestamp="1584557182446">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

@@ -8,8 +8,8 @@ public class Main {
     public static void main(String[] args) {
 
 
-        LanguageStats.guessLanguage();
-        LanguageStats.threeletterCombo();
+       LanguageStats.guessLanguage();
+      //  LanguageStats.threeletterCombo();
 
 
 
