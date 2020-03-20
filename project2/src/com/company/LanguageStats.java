@@ -46,6 +46,7 @@ public class LanguageStats {
 
         //User input skapas som en language
         Language userinL = new Language(userlangIn.replaceAll("[\\PL]", "").toLowerCase(), null);
+        userinL.calculateCharDistributionThreeLetters(userinL.getContent());
 
         double totalDiff = 0;
         LinkedHashMap<String, Double> resultHash = new LinkedHashMap<>();
@@ -72,24 +73,6 @@ public class LanguageStats {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
 
-        ArrayList<String> threeLetters = new ArrayList<>();
-        String text = userinL.getContent();
-        int j = 0;
-        for (int i = 1; i < text.length() -1; i++) {
-
-            char a = text.charAt(0 + j);
-            char b = text.charAt(1 + j);
-            char c = text.charAt(2 + j);
-            String result = ""+a + b + c;
-                threeLetters.add(result);
-            j++;
-
-
-
-        }
-        for (int i = 0; i < threeLetters.size(); i++) {
-            System.out.println(threeLetters.get(i));
-        }
 
 
     }
