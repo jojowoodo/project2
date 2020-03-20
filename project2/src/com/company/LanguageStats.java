@@ -37,6 +37,11 @@ public class LanguageStats {
     public static void guessLanguage() {
 
         ArrayList<Language> guessArray = addLanguage();
+        ArrayList<Language> guessArray2 = addLanguage();
+        LinkedHashMap<String, Double> resultHash = new LinkedHashMap<>();
+        LinkedHashMap<String, Double> resultHash2 = new LinkedHashMap<>();
+        double totalDiff = 0.0;
+        double totalDiff2 = 0.0;
 
         Scanner userIn = new Scanner(System.in);
         System.out.println("Var så vänlig å mata in en text för att jämföra det med ett språk.");
@@ -47,41 +52,23 @@ public class LanguageStats {
         //User input skapas som en language
         Language userinL = new Language(userlangIn.replaceAll("[\\PL]", "").toLowerCase(), null);
 
-
-
-        LinkedHashMap<String, Double> resultHash = new LinkedHashMap<>();
-        LinkedHashMap<String, Double> resultHash2 = new LinkedHashMap<>();
-
-        double totalDiff = 0.0;
-        double totalDiff2 = 0.0;
         for (int i = 0; i < guessArray.size(); i++) {
             HashMap<String, Double> userOneHash = userinL.calculateCharDistribution(userinL.getContent());
-         //   HashMap<String, Double> userThreeHash = userinL.calculateCharDistributionThreeLetters(userinL.getContent());
             HashMap<String, Double> oneCharHash = guessArray.get(i).calculateCharDistribution(guessArray.get(i).getContent());
-          //  HashMap<String, Double> threeCharHash = guessArray.get(i).calculateCharDistributionThreeLetters(guessArray.get(i).getContent());
 
             for (String j : oneCharHash.keySet()) {
                 if (userOneHash.get(j) == null) {
-                    totalDiff += Math.pow(oneCharHash.get(j) - 0.0, 2);
+                    totalDiff += Math.pow(oneCharHash.get(j) - 0, 2);
 
                 } else {
                     totalDiff += Math.pow(oneCharHash.get(j) - userOneHash.get(j), 2);
+
                 }
-                resultHash.put(guessArray.get(i).getLanguageLabel(), totalDiff);
-                totalDiff = 0.0;
+
+
             }
-
-          /*  for (String j : threeCharHash.keySet()) {
-                if (userThreeHash.get(j) == null) {
-                    totalDiff2 += Math.pow(threeCharHash.get(j) - 0, 2);
-
-                } else {
-                    totalDiff2 += Math.pow(threeCharHash.get(j) - userThreeHash.get(j), 2);
-                }
-                resultHash2.put(guessArray.get(i).getLanguageLabel(), totalDiff2);
-                totalDiff2 = 0;
-            } */
-
+            resultHash.put(guessArray.get(i).getLanguageLabel(), totalDiff);
+            totalDiff = 0;
 
 
         }
@@ -89,48 +76,31 @@ public class LanguageStats {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
 
-        //for (HashMap.Entry entry2 : resultHash2.entrySet()) {
-         //   System.out.println(entry2.getKey() + " " + entry2.getValue());
-       // }
+            for (int i = 0; i < guessArray2.size(); i++) {
+
+                HashMap<String, Double> userThreeHash = userinL.calculateCharDistributionThreeLetters(userinL.getContent());
+                HashMap<String, Double> threeCharHash = guessArray.get(i).calculateCharDistributionThreeLetters(guessArray.get(i).getContent());
 
 
+                for (String j : threeCharHash.keySet()) {
+                    if (userThreeHash.get(j) == null) {
+                        totalDiff2 += Math.pow(threeCharHash.get(j) - 0, 2);
 
-        System.out.println("\n");
-
-
-
-     /*   ArrayList<Language> guessArray2 = addLanguage();
-
-
-        for (int i = 0; i < guessArray2.size(); i++) {
-
-            HashMap<String, Double> userHash2 = userinL.calculateCharDistributionThreeLetters(userinL.getContent());
-            HashMap<String, Double> LoopHash2 = guessArray2.get(i).calculateCharDistributionThreeLetters(guessArray.get(i).getContent());
-
-
-            for (String j : LoopHash2.keySet()) {
-                if (userHash2.get(j) == null) {
-                    totalDiff2 += Math.pow(LoopHash2.get(j) - 0, 2);
-
-                } else {
-                    totalDiff2 += Math.pow(LoopHash2.get(j) - userHash2.get(j), 2);
+                    } else {
+                        totalDiff2 += Math.pow(threeCharHash.get(j) - userThreeHash.get(j), 2);
+                    }
                 }
-            }
-            resultHash2.put(guessArray2.get(i).getLanguageLabel(), totalDiff2);
-            totalDiff2 = 0;
+                resultHash2.put(guessArray2.get(i).getLanguageLabel(), totalDiff2);
+                totalDiff2 = 0;
 
+
+            }
+
+            for (HashMap.Entry entry : resultHash2.entrySet()) {
+                System.out.println(entry.getKey() + " " + entry.getValue());
+            }
 
         }
-
-        for (HashMap.Entry entry : resultHash2.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
-        } */
-
-    }
-
-
-
-
 
 
     }
