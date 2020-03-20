@@ -79,19 +79,50 @@ public class LanguageStats {
 
     public void threeletterCombo() {
 
-        String word = "hello";
-        for (int i = 0; i < word.length() - 2; i++)
-            for (int j = i + 1; j < word.length() - 1; j++)
-                for (int k = j + 1; k < word.length(); k++) {
-                    String sub = String.Format("{0}{1}{2}", word[i], word[j], word[k]);
-                    for (int l = 0; l < 3; l++)
-                        for (int m = 0; m < 3; m++)
-                            for (int n = 0; n < 3; n++)
-                                if (l != m && m != n && l != n)
-                                    System.out.println("\t{0}{1}{2}", sub[l], sub[m], sub[n]);
-                    Console.WriteLine("");
-                }
+        LinkedHashMap<String, Integer> theeLetters = new LinkedHashMap();
+        String k = "Kalle skäller";
+        System.out.println(theeLetters);
+
+
+
+        for(int j = 1; j++<k.length() - 1;j++) {
+            String s = "kal";
+            int i = theeLetters.get(s) + 1;
+            theeLetters.put(s,i);
+        }
+
+
+
+        /*
+        for (String i : theeLetters.keySet()) {
+            System.out.println("key: " + i + " value: " + theeLetters.get(i));
+        }*/
+
+
+
     }
 
+    public class All_Possible_Combinations_5 {
 
+        public void main(String args[]) {
+
+            for (int i = 97; i <= 122; i++) {
+                for (int j = 97; j <= 122; j++) {
+                    for (int k = 97; k <= 122; k++) {
+                        for (int l = 97; l <= 122; l++) {
+                            for (int m = 97; m <= 122; m++) {
+                                System.out.print((char) i);
+                                System.out.print((char) j);
+                                System.out.print((char) k);
+                                System.out.print((char) l);
+                                System.out.println((char) m);
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
 }
