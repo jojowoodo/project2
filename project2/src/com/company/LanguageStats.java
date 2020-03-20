@@ -51,7 +51,7 @@ public class LanguageStats {
         double totalDiff = 0;
         LinkedHashMap<String, Double> resultHash = new LinkedHashMap<>();
 
-        for (int i = 0; i < guessArray.size(); i++) {
+      /*  for (int i = 0; i < guessArray.size(); i++) {
 
             HashMap<String, Double> userHash = userinL.calculateCharDistribution(userinL.getContent());
             HashMap<String, Double> LoopHash = guessArray.get(i).calculateCharDistribution(guessArray.get(i).getContent());
@@ -72,16 +72,16 @@ public class LanguageStats {
        for (HashMap.Entry entry : resultHash.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
-
+  */
 
 
     }
+}
 
 
 
 
-
-    public static void threeletterCombo() {
+   /* public static void threeletterCombo() {
 
         LinkedHashMap<String, Integer> theeLetters = new LinkedHashMap();
         String k = "Kalle skäller";
@@ -96,7 +96,7 @@ public class LanguageStats {
         } */
 
 
-    }
+   // }
 
 
         /*
@@ -130,4 +130,4 @@ public class LanguageStats {
 
         }
    */
-    }
+   /* } */
