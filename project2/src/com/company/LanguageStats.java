@@ -46,43 +46,60 @@ public class LanguageStats {
 
         //User input skapas som en language
         Language userinL = new Language(userlangIn.replaceAll("[\\PL]", "").toLowerCase(), null);
-        userinL.calculateCharDistributionThreeLetters(userinL.getContent());
-        userinL.calculateCharDistribution(userinL.getContent());
 
 
-        double totalDiff = 0;
-         double totalDiff2 = 0;
+
         LinkedHashMap<String, Double> resultHash = new LinkedHashMap<>();
         LinkedHashMap<String, Double> resultHash2 = new LinkedHashMap<>();
 
+        double totalDiff = 0.0;
+        double totalDiff2 = 0.0;
         for (int i = 0; i < guessArray.size(); i++) {
+            HashMap<String, Double> userOneHash = userinL.calculateCharDistribution(userinL.getContent());
+         //   HashMap<String, Double> userThreeHash = userinL.calculateCharDistributionThreeLetters(userinL.getContent());
+            HashMap<String, Double> oneCharHash = guessArray.get(i).calculateCharDistribution(guessArray.get(i).getContent());
+          //  HashMap<String, Double> threeCharHash = guessArray.get(i).calculateCharDistributionThreeLetters(guessArray.get(i).getContent());
 
-            HashMap<String, Double> userHash = userinL.calculateCharDistribution(userinL.getContent());
-            HashMap<String, Double> LoopHash = guessArray.get(i).calculateCharDistribution(guessArray.get(i).getContent());
-
-
-            for (String j : LoopHash.keySet()) {
-                if (userHash.get(j) == null) {
-                    totalDiff += Math.pow(LoopHash.get(j) - 0, 2);
+            for (String j : oneCharHash.keySet()) {
+                if (userOneHash.get(j) == null) {
+                    totalDiff += Math.pow(oneCharHash.get(j) - 0.0, 2);
 
                 } else {
-                    totalDiff += Math.pow(LoopHash.get(j) - userHash.get(j), 2);
+                    totalDiff += Math.pow(oneCharHash.get(j) - userOneHash.get(j), 2);
                 }
+                resultHash.put(guessArray.get(i).getLanguageLabel(), totalDiff);
+                totalDiff = 0.0;
             }
-            resultHash.put(guessArray.get(i).getLanguageLabel(), totalDiff);
-            totalDiff = 0;
+
+          /*  for (String j : threeCharHash.keySet()) {
+                if (userThreeHash.get(j) == null) {
+                    totalDiff2 += Math.pow(threeCharHash.get(j) - 0, 2);
+
+                } else {
+                    totalDiff2 += Math.pow(threeCharHash.get(j) - userThreeHash.get(j), 2);
+                }
+                resultHash2.put(guessArray.get(i).getLanguageLabel(), totalDiff2);
+                totalDiff2 = 0;
+            } */
+
+
 
         }
         for (HashMap.Entry entry : resultHash.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
 
+        //for (HashMap.Entry entry2 : resultHash2.entrySet()) {
+         //   System.out.println(entry2.getKey() + " " + entry2.getValue());
+       // }
+
+
 
         System.out.println("\n");
 
 
 
-        ArrayList<Language> guessArray2 = addLanguage();
+     /*   ArrayList<Language> guessArray2 = addLanguage();
 
 
         for (int i = 0; i < guessArray2.size(); i++) {
@@ -107,7 +124,7 @@ public class LanguageStats {
 
         for (HashMap.Entry entry : resultHash2.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue());
-        }
+        } */
 
     }
 
