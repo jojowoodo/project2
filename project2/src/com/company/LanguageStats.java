@@ -72,7 +72,25 @@ public class LanguageStats {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
 
+
+        String text = userinL.getContent();
+        int j = 0;
+        for (int i = 0; i < text.length(); i++) {
+
+            char a = text.charAt(0 + j);
+            char b = text.charAt(1 + j);
+            char c = text.charAt(2 + j);
+            String result = ""+a + b + c;
+            j++;
+            System.out.println(result);
+
+
+        }
     }
+
+
+
+
 
     public static void threeletterCombo() {
 
@@ -87,18 +105,7 @@ public class LanguageStats {
             int i = theeLetters.get(s) + 1;
             theeLetters.put(s,i);
         } */
-        String text = guessArray2.get(0).getContent();
-        int j = 0;
-        for (int i = 0; i < text.length(); i++) {
 
-            char a = text.charAt(0 + j);
-            char b = text.charAt(1 + j);
-            char c = text.charAt(2 + j);
-            j++;
-            System.out.println(""+a + b  + c);
-
-
-        }
 
     }
 
