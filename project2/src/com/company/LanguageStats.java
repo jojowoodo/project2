@@ -40,10 +40,13 @@ public class LanguageStats {
 
         Scanner userIn = new Scanner(System.in);
 
+
         System.out.println("Var så vänlig å mata in en text för att jämföra det med ett språk.");
 
+        //User input läses in
         String userlangIn = userIn.nextLine();
 
+        //User input skapas som en language
         Language userinL = new Language(userlangIn.replaceAll("[\\PL]", "").toLowerCase(), null);
 
         double totalDiff = 0;

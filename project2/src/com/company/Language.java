@@ -51,7 +51,6 @@ public class Language {
             }
         }
 
-        // Printing the charCountMap
 
         for (HashMap.Entry entry : charCountMap.entrySet()) {
             total += (Integer) entry.getValue();
@@ -62,7 +61,7 @@ public class Language {
             charDistribution.put(entry.getKey().toString(), (double) temp / (double) total);
         }
 
-     //   for (HashMap.Entry entry : charDistribution.entrySet()) {
+        //for (HashMap.Entry entry : charDistribution.entrySet()) {
        //     System.out.println(entry.getKey() + " " + entry.getValue());
       //  }
         System.out.println(charDistribution);
