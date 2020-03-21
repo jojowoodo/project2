@@ -38,10 +38,13 @@ public class LanguageStats {
 
         ArrayList<Language> guessArray = addLanguage();
         ArrayList<Language> guessArray2 = addLanguage();
+        ArrayList<Language> guessArray3 = addLanguage();
         LinkedHashMap<String, Double> resultHash = new LinkedHashMap<>();
         LinkedHashMap<String, Double> resultHash2 = new LinkedHashMap<>();
+        LinkedHashMap<String, Double> resultHash3 = new LinkedHashMap<>();
         double totalDiff = 0.0;
         double totalDiff2 = 0.0;
+        double totalDiff3= 0.0;
 
         Scanner userIn = new Scanner(System.in);
         System.out.println("Var så vänlig å mata in en text för att jämföra det med ett språk.");
@@ -73,37 +76,61 @@ public class LanguageStats {
 
         }
         for (HashMap.Entry entry : resultHash.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
+            System.out.println("All letter algo: " + entry.getKey() + " " + entry.getValue());
         }
 
-            for (int i = 0; i < guessArray2.size(); i++) {
+        for (int i = 0; i < guessArray2.size(); i++) {
 
-                HashMap<String, Double> userThreeHash = userinL.calculateCharDistributionThreeLetters(userinL.getContent());
-                HashMap<String, Double> threeCharHash = guessArray.get(i).calculateCharDistributionThreeLetters(guessArray.get(i).getContent());
+            HashMap<String, Double> userThreeHash = userinL.calculateCharDistributionThreeLetters(userinL.getContent());
+            HashMap<String, Double> threeCharHash = guessArray.get(i).calculateCharDistributionThreeLetters(guessArray.get(i).getContent());
 
 
-                for (String j : threeCharHash.keySet()) {
-                    if (userThreeHash.get(j) == null) {
-                        totalDiff2 += Math.pow(threeCharHash.get(j) - 0, 2);
+            for (String j : threeCharHash.keySet()) {
+                if (userThreeHash.get(j) == null) {
+                    totalDiff2 += Math.pow(threeCharHash.get(j) - 0, 2);
 
-                    } else {
-                        totalDiff2 += Math.pow(threeCharHash.get(j) - userThreeHash.get(j), 2);
-                    }
+                } else {
+                    totalDiff2 += Math.pow(threeCharHash.get(j) - userThreeHash.get(j), 2);
                 }
-                resultHash2.put(guessArray2.get(i).getLanguageLabel(), totalDiff2);
-                totalDiff2 = 0;
-
-
             }
+            resultHash2.put(guessArray2.get(i).getLanguageLabel(), totalDiff2);
+            totalDiff2 = 0;
 
-            for (HashMap.Entry entry : resultHash2.entrySet()) {
-                System.out.println(entry.getKey() + " " + entry.getValue());
-            }
 
         }
 
+        for (HashMap.Entry entry : resultHash2.entrySet()) {
+            System.out.println("Three Letter algo: " + entry.getKey() + " " + entry.getValue());
+        }
+
+        //FirstLetterOfEachWord
+        for (int i = 0; i < guessArray3.size(); i++) {
+            HashMap<String, Double> userFirstHash = userinL.calculateCharDistributionFirstLetter(userinL.getContent());
+            HashMap<String, Double> firstCharHash = guessArray.get(i).calculateCharDistributionFirstLetter(guessArray.get(i).getContent());
+
+            for (String j : firstCharHash.keySet()) {
+                if (userFirstHash.get(j) == null) {
+                    totalDiff3 += Math.pow(firstCharHash.get(j) - 0, 2);
+
+                } else {
+                    totalDiff3 += Math.pow(firstCharHash.get(j) - userFirstHash.get(j), 2);
+
+                }
+
+
+            }
+            resultHash3.put(guessArray3.get(i).getLanguageLabel(), totalDiff3);
+            totalDiff3 = 0;
+
+
+        }
+        for (HashMap.Entry entry : resultHash3.entrySet()) {
+            System.out.println("First Letter algo: " + entry.getKey() + " " + entry.getValue());
+        }
 
     }
+
+}
 
 
 
@@ -124,7 +151,7 @@ public class LanguageStats {
         } */
 
 
-   // }
+// }
 
 
         /*
@@ -158,4 +185,4 @@ public class LanguageStats {
 
         }
    */
-   /* } */
+/* } */
