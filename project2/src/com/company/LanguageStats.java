@@ -7,7 +7,7 @@ import java.util.*;
 public class LanguageStats {
 
     public static ArrayList<Language> Languages = new ArrayList();
-    public static ArrayList<Language> Languages2 = new ArrayList();
+    public static ArrayList<Language> LanguagesWithSpaces = new ArrayList();
 
     public static ArrayList<Language> addLanguage() {
 
@@ -32,31 +32,32 @@ public class LanguageStats {
         Languages.add(Norwegian);
 
 
-        return Languages2;
+        return Languages;
     }
 
     public static ArrayList<Language> addLanguage2() {
 
 
-        Language Svenska2 = new Language(FileInput.readFile("Svenska.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()-]", "").replaceAll("\\]","").toLowerCase(), "Swedish");
-        Language English2 = new Language(FileInput.readFile("English.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()-]", "").replaceAll("\\]","").toLowerCase(), "English");
-        Language Suomi2 = new Language(FileInput.readFile("Suomi.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()-]", "").replaceAll("\\]","").toLowerCase(), "Finnish");
-        Language Deutsch2 = new Language(FileInput.readFile("Deutch.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()-]", "").replaceAll("\\]","").toLowerCase(), "Deutsch");
-        Language Eesti2 = new Language(FileInput.readFile("Eesti.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()-]", "").replaceAll("\\]","").toLowerCase(), "Eesti");
-        Language Frenc2 = new Language(FileInput.readFile("Francais.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()-]", "").replaceAll("\\]","").toLowerCase(), "French");
-        Language Italian2 = new Language(FileInput.readFile("Italiano.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()-]", "").replaceAll("\\]","").toLowerCase(), "Italian");
-        Language Norwegian2 = new Language(FileInput.readFile("Norsk.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()-]", "").replaceAll("\\]","").toLowerCase(), "Norwegian");
-        Languages2.add(Svenska2);
-        Languages2.add(English2);
-        Languages2.add(Suomi2);
-        Languages2.add(Deutsch2);
-        Languages2.add(Eesti2);
-        Languages2.add(Frenc2);
-        Languages2.add(Italian2);
-        Languages2.add(Norwegian2);
+        Language Svenska2 = new Language(FileInput.readFile("Svenska.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "Swedish");
+        Language English2 = new Language(FileInput.readFile("English.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "English");
+        Language Suomi2 = new Language(FileInput.readFile("Suomi.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "Finnish");
+        Language Deutsch2 = new Language(FileInput.readFile("Deutch.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "Deutsch");
+        Language Eesti2 = new Language(FileInput.readFile("Eesti.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "Eesti");
+        Language Frenc2 = new Language(FileInput.readFile("Francais.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "French");
+        Language Italian2 = new Language(FileInput.readFile("Italiano.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "Italian");
+        Language Norwegian2 = new Language(FileInput.readFile("Norsk.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "Norwegian");
+        System.out.println(Svenska2.getContent());
+        LanguagesWithSpaces.add(Svenska2);
+        LanguagesWithSpaces.add(English2);
+        LanguagesWithSpaces.add(Suomi2);
+        LanguagesWithSpaces.add(Deutsch2);
+        LanguagesWithSpaces.add(Eesti2);
+        LanguagesWithSpaces.add(Frenc2);
+        LanguagesWithSpaces.add(Italian2);
+        LanguagesWithSpaces.add(Norwegian2);
 
 
-        return Languages2;
+        return LanguagesWithSpaces;
     }
 
     public static void guessLanguage() {
@@ -87,8 +88,8 @@ public class LanguageStats {
 
 
         //User input skapas som en language
-        Language userinL = new Language(userlangIn.replaceAll("[;\\\\/:*?\\\"<>|&']", "").toLowerCase(), "unknown");
-        Language UserinLWithSpaces = new Language(userlangIn.replaceAll("[;\\[0-9:*?\"<>|&',.()-]", "").replaceAll("\\]","").toLowerCase(), "unknown");
+        Language userinL = new Language(userlangIn.replaceAll("[\\PL]", "").toLowerCase(), "unknown");
+        Language UserinLWithSpaces = new Language(userlangIn.replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").toLowerCase(), "unknown");
 
 
         for (int i = 0; i < guessArray.size(); i++) {
@@ -165,7 +166,8 @@ public class LanguageStats {
         //FirstLetterOfEachWord
         for (int i = 0; i < guessArray3.size(); i++) {
             HashMap<String, Double> userFirstHash = UserinLWithSpaces.calculateCharDistributionFirstLetter(UserinLWithSpaces.getContent());
-            HashMap<String, Double> firstCharHash = guessArray.get(i).calculateCharDistributionFirstLetter(guessArray.get(i).getContent());
+            HashMap<String, Double> firstCharHash = guessArray3.get(i).calculateCharDistributionFirstLetter(guessArray3.get(i).getContent());
+
 
             for (String j : firstCharHash.keySet()) {
                 if (userFirstHash.get(j) == null) {
