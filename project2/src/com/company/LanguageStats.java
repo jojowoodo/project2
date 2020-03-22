@@ -89,7 +89,7 @@ public class LanguageStats {
 
         //User input skapas som en language
         Language userinL = new Language(userlangIn.replaceAll("[\\PL]", "").toLowerCase(), "unknown");
-        Language UserinLWithSpaces = new Language(userlangIn.replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").toLowerCase(), "unknown");
+        Language UserinLWithSpaces = new Language(userlangIn.replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "unknown");
 
 
         for (int i = 0; i < guessArray.size(); i++) {
