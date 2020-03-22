@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29aa0780-d5c7-4d40-a7c7-097aa91d2129" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Language.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Language.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/com/company/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/Language.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project2/src/com/company/LanguageStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/LanguageStats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +95,7 @@
       <workItem from="1584635684332" duration="1225000" />
       <workItem from="1584694883372" duration="7445000" />
       <workItem from="1584827734557" duration="1754000" />
-      <workItem from="1584870765111" duration="3622000" />
+      <workItem from="1584870765111" duration="3889000" />
     </task>
     <task id="LOCAL−00001" summary="fixar på FileInput">
       <created>1583393315701</created>
@@ -265,7 +260,13 @@
       <option name="presentableId" value="LOCAL−00025" />
       <updated>1584790803411</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL−00026" summary="Fått den att printa ut en hashmap där resultaten sparas.">
+      <created>1584875200544</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1584875200544</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +286,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixar på FileInput" />
     <MESSAGE value="Skapade en contructor samt calcchardist" />
     <MESSAGE value="Fixa till att alla languages läses in i main;" />
     <MESSAGE value="getContent i Language" />
@@ -310,7 +310,8 @@
     <MESSAGE value="funderingar" />
     <MESSAGE value="funderingar igen" />
     <MESSAGE value="Lagt till en halvt fungerande first letter combination" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lagt till en halvt fungerande first letter combination" />
+    <MESSAGE value="Fått den att printa ut en hashmap där resultaten sparas." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fått den att printa ut en hashmap där resultaten sparas." />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583220637134">

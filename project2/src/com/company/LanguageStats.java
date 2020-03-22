@@ -1,11 +1,7 @@
 package com.company;
 
 import java.awt.image.AreaAveragingScaleFilter;
-import java.util.ArrayList;
-
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class LanguageStats {
 
@@ -45,10 +41,12 @@ public class LanguageStats {
         LinkedHashMap<String, Double> resultHash3 = new LinkedHashMap<>();
         double totalDiff = 0.0;
         double totalDiff2 = 0.0;
-        double totalDiff3= 0.0;
+        double totalDiff3 = 0.0;
 
-       HashMap resultLanguage = new HashMap();
+        //resultat hashmap
+        LinkedHashMap resultLanguage = new LinkedHashMap();
 
+        //User input
         Scanner userIn = new Scanner(System.in);
         System.out.println("Var så vänlig å mata in en text för att jämföra det med ett språk.");
 
@@ -77,15 +75,15 @@ public class LanguageStats {
             totalDiff = 0;
 
 
-
         }
 
         for (HashMap.Entry entry : resultHash.entrySet()) {
-            System.out.println("All letter algo: \n"  + entry.getKey() + " " + entry.getValue() + " \n");
-            resultLanguage.put(entry.getKey() , entry.getValue());
-            System.out.println(" dethär är ett test" + resultLanguage);
+            //System.out.println("All letter algo: \n"  + entry.getKey() + " " + entry.getValue() + " \n");
+            resultLanguage.put(entry.getKey(), entry.getValue());
         }
 
+        System.out.println(" dethär är ett test" + resultLanguage);
+        resultLanguage.clear();
 
         for (int i = 0; i < guessArray2.size(); i++) {
 
@@ -108,9 +106,12 @@ public class LanguageStats {
         }
 
         for (HashMap.Entry entry : resultHash2.entrySet()) {
-            System.out.println("Three Letter algo: \n" + entry.getKey() + " " + entry.getValue() + " \n");
+            //System.out.println("Three Letter algo: \n" + entry.getKey() + " " + entry.getValue() + " \n");
+            resultLanguage.put(entry.getKey(), entry.getValue());
         }
 
+        System.out.println(" dethär är ett test" + resultLanguage);
+        resultLanguage.clear();
         //FirstLetterOfEachWord
         for (int i = 0; i < guessArray3.size(); i++) {
             HashMap<String, Double> userFirstHash = userinL.calculateCharDistributionFirstLetter(userinL.getContent());
@@ -133,11 +134,12 @@ public class LanguageStats {
 
         }
         for (HashMap.Entry entry : resultHash3.entrySet()) {
-            System.out.println("First Letter algo: \n" + entry.getKey() + " " + entry.getValue() + " \n");
+            //System.out.println("First Letter algo: \n" + entry.getKey() + " " + entry.getValue() + " \n");
+            resultLanguage.put(entry.getKey(), entry.getValue());
         }
 
-
-
+        System.out.println(" dethär är ett test" + resultLanguage);
+        resultLanguage.clear();
 
     }
 
