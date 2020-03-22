@@ -68,7 +68,8 @@ public class Language {
 
     public HashMap<String, Double> calculateCharDistributionFirstLetter(String inputString) {
             ArrayList<String> firstLetter = new ArrayList<>();
-        String s = inputString;
+        String text = inputString;
+
 
        /* char a[] = s.toCharArray();
 
@@ -84,10 +85,12 @@ public class Language {
             }
         } */
 
-        for (String g : s.split(" ")) {
-            char a = g.charAt(0);
-            String b = String.valueOf(a);
-            firstLetter.add(b);
+
+        String[] g = text.split(" ");
+        for (int i = 0; i < g.length; i++) {
+            String s = g[i];
+            firstLetter.add(String.valueOf(s.charAt(0)));
+
         }
         for(int i = 0; i < firstLetter.size(); i++){
             System.out.println(firstLetter.get(i));

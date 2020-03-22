@@ -150,7 +150,8 @@ public class LanguageStats {
         //FirstLetterOfEachWord
         for (int i = 0; i < guessArray3.size(); i++) {
             HashMap<String, Double> userFirstHash = UserinLWithSpaces.calculateCharDistributionFirstLetter(UserinLWithSpaces.getContent());
-            HashMap<String, Double> firstCharHash = guessArray.get(i).calculateCharDistributionFirstLetter(guessArray.get(i).getContent());
+            HashMap<String, Double> firstCharHash = guessArray3.get(i).calculateCharDistributionFirstLetter(guessArray3.get(i).getContent());
+
 
             for (String j : firstCharHash.keySet()) {
                 if (userFirstHash.get(j) == null) {
