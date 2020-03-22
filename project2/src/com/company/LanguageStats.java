@@ -176,7 +176,7 @@ public class LanguageStats {
             resultLanguage.put(entry.getKey(), df.format(entry.getValue()));
         }
 
-        System.out.println(df.format("Analys 3: \n" + resultLanguage + " \n"));
+       // System.out.println(df.format("Analys 3: \n" + resultLanguage + " \n"));
         resultLanguage.clear();
 
 

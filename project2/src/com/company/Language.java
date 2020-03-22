@@ -88,7 +88,6 @@ public class Language {
         String[] g = text.split(" ");
         for (int i = 0; i < g.length; i++) {
             String s = g[i];
-            System.out.println(s);
             firstLetter.add(String.valueOf(s.charAt(0)));
 
         }
@@ -123,9 +122,9 @@ public class Language {
             CountResult.put(entry.getKey().toString(), temp /  total);
         }
 
-        for (HashMap.Entry entry : CountResult.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
-        }
+       //for (HashMap.Entry entry : CountResult.entrySet()) {
+          //  System.out.println(entry.getKey() + " " + entry.getValue());
+       // }
         return CountResult;
     }
 
