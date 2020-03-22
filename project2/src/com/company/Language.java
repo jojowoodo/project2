@@ -8,6 +8,7 @@ import java.util.Map;
 public class Language {
     String content;
     String languageLabel;
+    //skapar arrays
     HashMap<String, Double> CountMap = new HashMap<>();
     HashMap<String, Double> CountResult = new HashMap<>();
     HashMap<String, Double> oneLetterResult = new HashMap<>();
@@ -29,6 +30,7 @@ public class Language {
         return languageLabel;
     }
 
+    //sätter in alla bokstäver som finns i en arraylist
     public HashMap<String, Double> calculateCharDistribution(String inputString) {
         ArrayList<String> oneLetters = new ArrayList<>();
 
@@ -45,6 +47,7 @@ public class Language {
         return oneLetterResult;
     }
 
+    //sätter in alla tre bokstävers kombionationer som finns i en arraylist
     public HashMap<String, Double> calculateCharDistributionThreeLetters(String inputString) {
         ArrayList<String> threeLetters = new ArrayList<>();
         String text = inputString;
@@ -64,6 +67,7 @@ public class Language {
         return threeLetterResult;
     }
 
+    //sätter in alla första bokstäver från ord som finns i en arraylist
     public HashMap<String, Double> calculateCharDistributionFirstLetter(String inputString) {
         ArrayList<String> firstLetter = new ArrayList<>();
         String text = inputString;
@@ -81,6 +85,7 @@ public class Language {
         return firstLetterResult;
     }
 
+    // metod för att sätta in bokstäver som key i en hashmap och iterate +1 om den redan finns i hashmappen annars blir det 1
     public HashMap<String, Double> getCharDistritubtion(ArrayList<String> charArray) {
         Double total = 0.0;
         for (int i = 0; i < charArray.size(); i++) {
