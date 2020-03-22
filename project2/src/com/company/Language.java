@@ -84,13 +84,12 @@ public class Language {
             }
         } */
 
-
         String[] g = text.split(" ");
         for (int i = 0; i < g.length; i++) {
             String s = g[i];
             firstLetter.add(String.valueOf(s.charAt(0)));
-
         }
+
       //  for(int i = 0; i < firstLetter.size(); i++){
           //  System.out.println(firstLetter.get(i));
        // }

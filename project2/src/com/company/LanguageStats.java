@@ -65,7 +65,7 @@ public class LanguageStats {
 
         DecimalFormat df = new DecimalFormat();
         df.setMaximumFractionDigits(2);
-
+        Formatter f = new Formatter();
         ArrayList<Language> guessArray = addLanguage();
         ArrayList<Language> guessArray2 = addLanguage();
         ArrayList<Language> guessArray3 = addLanguage2();
@@ -147,20 +147,11 @@ public class LanguageStats {
             resultLanguage.put(entry.getKey(), df.format(entry.getValue()));
         }
 
-        System.out.println("Analys 2: \n" + resultLanguage + " \n");
+        //System.out.println("Analys 2: \n" + resultLanguage + " \n");
         resultLanguage.clear();
 
         //for resulthash2
-        for (HashMap.Entry entry : resultHash.entrySet()) {
-            System.out.println(entry.getKey());
-            //double hej = entry.getValue(), hejdå, hejigen;
-            //System.out.println("Three Letter algo: \n" + entry.getKey() + " " + df.format(entry.getValue()) + " \n");
-            System.out.println(df.format(entry.getValue()));
-            System.out.println(df.format(resultHash2.get(entry.getKey())));
-           // System.out.println(df.format(resultHash3.get(entry.getKey())));
 
-            System.out.println("-----------------------------------------");
-        }
 
 
         //FirstLetterOfEachWord
@@ -195,7 +186,17 @@ public class LanguageStats {
         resultLanguage.clear();
 
 
+        for (HashMap.Entry entry : resultHash.entrySet()) {
 
+            System.out.println(entry.getKey());
+            //double hej = entry.getValue(), hejdå, hejigen;
+            //System.out.println("Three Letter algo: \n" + entry.getKey() + " " + df.format(entry.getValue()) + " \n");
+            System.out.println(df.format(entry.getValue()));
+            System.out.println(df.format(resultHash2.get(entry.getKey())));
+            System.out.println(df.format(resultHash3.get(entry.getKey())));
+
+            System.out.println("-----------------------------------------");
+        }
 
     }
 
