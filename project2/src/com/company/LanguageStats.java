@@ -1,6 +1,7 @@
 package com.company;
 
 import java.awt.image.AreaAveragingScaleFilter;
+import java.text.DecimalFormat;
 import java.util.*;
 
 public class LanguageStats {
@@ -59,6 +60,9 @@ public class LanguageStats {
     }
 
     public static void guessLanguage() {
+
+        DecimalFormat df = new DecimalFormat();
+        df.setMaximumFractionDigits(2);
 
         ArrayList<Language> guessArray = addLanguage();
         ArrayList<Language> guessArray2 = addLanguage();
@@ -169,8 +173,11 @@ public class LanguageStats {
             resultLanguage.put(entry.getKey(), entry.getValue());
         }
 
-        System.out.println("Analys 3: " + resultLanguage);
+        System.out.println(df.format("Analys 3: "  + resultLanguage));
         resultLanguage.clear();
+
+
+
 
     }
 

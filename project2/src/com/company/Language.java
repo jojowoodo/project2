@@ -20,7 +20,6 @@ public class Language {
 
         content = c;
         languageLabel = l;
-
     }
 
     public String getContent() {
@@ -81,6 +80,7 @@ public class Language {
                 firstLetter.add(result);
                 System.out.println(result);
                 a[i]++;
+                System.out.println(a[i]);
             }
         } */
 
