@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/project2/src/com/company/LanguageStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/LanguageStats.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project2/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/Main.java" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,6 +99,8 @@
       <workItem from="1584552440357" duration="1664000" />
       <workItem from="1584635684332" duration="1225000" />
       <workItem from="1584694883372" duration="7445000" />
+      <workItem from="1584827734557" duration="1754000" />
+      <workItem from="1584870765111" duration="3622000" />
     </task>
     <task id="LOCAL−00001" summary="fixar på FileInput">
       <created>1583393315701</created>
@@ -256,7 +259,13 @@
       <option name="project" value="LOCAL" />
       <updated>1584714426920</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL−00025" summary="Lagt till en halvt fungerande first letter combination">
+      <created>1584790803411</created>
+      <option name="number" value="LOCAL−00025" />
+      <option name="presentableId" value="LOCAL−00025" />
+      <updated>1584790803411</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +309,8 @@
     <MESSAGE value="öömm printar ut tretecken kombinationer" />
     <MESSAGE value="funderingar" />
     <MESSAGE value="funderingar igen" />
-    <option name="LAST_COMMIT_MESSAGE" value="funderingar igen" />
+    <MESSAGE value="Lagt till en halvt fungerande first letter combination" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lagt till en halvt fungerande first letter combination" />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583220637134">

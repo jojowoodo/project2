@@ -66,19 +66,21 @@ public class Language {
 
         return threeLetterResult;
     }
+
     public HashMap<String, Double> calculateCharDistributionFirstLetter(String inputString) {
-        ArrayList<String> firstLetter = new ArrayList<>();
+            ArrayList<String> firstLetter = new ArrayList<>();
         String s = inputString;
+
         char a[] = s.toCharArray();
 
         for(int i=0; i < a.length; i++) {
             if(a[i] != ' ' && (i == 0 || a[i-1] == ' ')) {
                 //System.out.println(a[i]);
+                String result = " " + a[i];
+                //System.out.println(a[i]);
+                firstLetter.add(result);
+                a[i]++;
             }
-            String result = " " + a[i];
-            //System.out.println(a[i]);
-            firstLetter.add(result);
-            a[i]++;
         }
         firstLetterResult = getCharDistritubtion(firstLetter);
 

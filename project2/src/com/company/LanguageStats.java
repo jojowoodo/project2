@@ -1,5 +1,6 @@
 package com.company;
 
+import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 
 import java.util.HashMap;
@@ -46,6 +47,8 @@ public class LanguageStats {
         double totalDiff2 = 0.0;
         double totalDiff3= 0.0;
 
+       HashMap resultLanguage = new HashMap();
+
         Scanner userIn = new Scanner(System.in);
         System.out.println("Var så vänlig å mata in en text för att jämföra det med ett språk.");
 
@@ -74,10 +77,15 @@ public class LanguageStats {
             totalDiff = 0;
 
 
+
         }
+
         for (HashMap.Entry entry : resultHash.entrySet()) {
-            System.out.println("All letter algo: " + entry.getKey() + " " + entry.getValue());
+            System.out.println("All letter algo: \n"  + entry.getKey() + " " + entry.getValue() + " \n");
+            resultLanguage.put(entry.getKey() , entry.getValue());
+            System.out.println(" dethär är ett test" + resultLanguage);
         }
+
 
         for (int i = 0; i < guessArray2.size(); i++) {
 
@@ -100,7 +108,7 @@ public class LanguageStats {
         }
 
         for (HashMap.Entry entry : resultHash2.entrySet()) {
-            System.out.println("Three Letter algo: " + entry.getKey() + " " + entry.getValue());
+            System.out.println("Three Letter algo: \n" + entry.getKey() + " " + entry.getValue() + " \n");
         }
 
         //FirstLetterOfEachWord
@@ -125,8 +133,11 @@ public class LanguageStats {
 
         }
         for (HashMap.Entry entry : resultHash3.entrySet()) {
-            System.out.println("First Letter algo: " + entry.getKey() + " " + entry.getValue());
+            System.out.println("First Letter algo: \n" + entry.getKey() + " " + entry.getValue() + " \n");
         }
+
+
+
 
     }
 
@@ -134,55 +145,3 @@ public class LanguageStats {
 
 
 
-
-
-   /* public static void threeletterCombo() {
-
-        LinkedHashMap<String, Integer> theeLetters = new LinkedHashMap();
-        String k = "Kalle skäller";
-        System.out.println(theeLetters);
-        ArrayList<Language> guessArray2 = addLanguage();
-
-
-       /* for(int j = 1; j++<k.length() - 1;j++) {
-            String s = "kal";
-            int i = theeLetters.get(s) + 1;
-            theeLetters.put(s,i);
-        } */
-
-
-// }
-
-
-        /*
-        for (String i : theeLetters.keySet()) {
-            System.out.println("key: " + i + " value: " + theeLetters.get(i));
-        }
-
-
-/*
-    }
-
-    public class All_Possible_Combinations_5 {
-
-        public void main(String args[]) {
-
-            for (int i = 97; i <= 122; i++) {
-                for (int j = 97; j <= 122; j++) {
-                    for (int k = 97; k <= 122; k++) {
-                        for (int l = 97; l <= 122; l++) {
-                            for (int m = 97; m <= 122; m++) {
-                                System.out.print((char) i);
-                                System.out.print((char) j);
-                                System.out.print((char) k);
-                                System.out.print((char) l);
-                                System.out.println((char) m);
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-   */
-/* } */
