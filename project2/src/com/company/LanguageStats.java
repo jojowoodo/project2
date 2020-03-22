@@ -61,6 +61,7 @@ public class LanguageStats {
 
     public static void guessLanguage() {
 
+
         DecimalFormat df = new DecimalFormat();
         df.setMaximumFractionDigits(2);
 
@@ -105,6 +106,7 @@ public class LanguageStats {
 
 
             }
+
             resultHash.put(guessArray.get(i).getLanguageLabel(), totalDiff);
             totalDiff = 0;
 
@@ -114,10 +116,11 @@ public class LanguageStats {
         for (HashMap.Entry entry : resultHash.entrySet()) {
             //System.out.println("All letter algo: \n"  + entry.getKey() + " " + entry.getValue() + " \n");
             resultLanguage.put(entry.getKey(),df.format(entry.getValue()));
+
         }
 
 
-        System.out.println("Analys 1: \n" + resultLanguage + " \n");
+        System.out.format("Analys 1: \n" + resultHash + " \n" + resultLanguage + " \n");
         resultLanguage.clear();
 
         for (int i = 0; i < guessArray2.size(); i++) {
@@ -145,6 +148,18 @@ public class LanguageStats {
 
         System.out.println("Analys 2: \n" + resultLanguage + " \n");
         resultLanguage.clear();
+
+        //for resulthash2
+        for (HashMap.Entry entry : resultHash.entrySet()) {
+            System.out.println(entry.getKey());
+            double hej = entry.getValue(), hejdå, hejigen;
+            //System.out.println("Three Letter algo: \n" + entry.getKey() + " " + df.format(entry.getValue()) + " \n");
+            System.out.println(df.format(entry.getValue()));
+            System.out.println(df.format(resultHash2.get(entry.getKey())));
+           // System.out.println(df.format(resultHash3.get(entry.getKey())));
+
+            System.out.println("-----------------------------------------");
+        }
 
 
         //FirstLetterOfEachWord
