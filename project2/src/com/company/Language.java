@@ -55,7 +55,6 @@ public class Language {
             char a = text.charAt(0 + j);
             char b = text.charAt(1 + j);
             char c = text.charAt(2 + j);
-            char d = text.charAt(0 + j);
             String result = "" + a + b + c;
 
             threeLetters.add(result);
@@ -89,12 +88,13 @@ public class Language {
         String[] g = text.split(" ");
         for (int i = 0; i < g.length; i++) {
             String s = g[i];
+            System.out.println(s);
             firstLetter.add(String.valueOf(s.charAt(0)));
 
         }
-        for(int i = 0; i < firstLetter.size(); i++){
-            System.out.println(firstLetter.get(i));
-        }
+      //  for(int i = 0; i < firstLetter.size(); i++){
+          //  System.out.println(firstLetter.get(i));
+       // }
 
 
 
@@ -123,9 +123,9 @@ public class Language {
             CountResult.put(entry.getKey().toString(), temp /  total);
         }
 
-      //  for (HashMap.Entry entry : CountResult.entrySet()) {
-         //   System.out.println(entry.getKey() + " " + entry.getValue());
-      //  }
+        for (HashMap.Entry entry : CountResult.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
         return CountResult;
     }
 
