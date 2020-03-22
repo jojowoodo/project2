@@ -113,10 +113,11 @@ public class LanguageStats {
 
         for (HashMap.Entry entry : resultHash.entrySet()) {
             //System.out.println("All letter algo: \n"  + entry.getKey() + " " + entry.getValue() + " \n");
-            resultLanguage.put(entry.getKey(), entry.getValue());
+            resultLanguage.put(entry.getKey(),df.format(entry.getValue()));
         }
 
-        System.out.println("Analys 1: " + resultLanguage);
+
+        System.out.println("Analys 1: \n" + resultLanguage + " \n");
         resultLanguage.clear();
 
         for (int i = 0; i < guessArray2.size(); i++) {
@@ -138,11 +139,11 @@ public class LanguageStats {
         }
 
         for (HashMap.Entry entry : resultHash2.entrySet()) {
-            //System.out.println("Three Letter algo: \n" + entry.getKey() + " " + entry.getValue() + " \n");
-            resultLanguage.put(entry.getKey(), entry.getValue());
+            //System.out.println("Three Letter algo: \n" + entry.getKey() + " " + df.format(entry.getValue()) + " \n");
+            resultLanguage.put(entry.getKey(), df.format(entry.getValue()));
         }
 
-        System.out.println("Analys 2: " + resultLanguage);
+        System.out.println("Analys 2: \n" + resultLanguage + " \n");
         resultLanguage.clear();
 
 
@@ -170,10 +171,10 @@ public class LanguageStats {
 
         for (HashMap.Entry entry : resultHash3.entrySet()) {
             //System.out.println("First Letter algo: \n" + entry.getKey() + " " + entry.getValue() + " \n");
-            resultLanguage.put(entry.getKey(), entry.getValue());
+            resultLanguage.put(entry.getKey(), df.format(entry.getValue()));
         }
 
-        System.out.println(df.format("Analys 3: "  + resultLanguage));
+        System.out.println(df.format("Analys 3: \n" + resultLanguage + " \n"));
         resultLanguage.clear();
 
 
