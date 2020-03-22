@@ -1,9 +1,9 @@
 package com.company;
 
-import java.awt.image.AreaAveragingScaleFilter;
 import java.text.DecimalFormat;
 import java.util.*;
-import java.util.Formatter;
+
+
 public class LanguageStats {
 
     public static ArrayList<Language> Languages = new ArrayList();
@@ -35,18 +35,18 @@ public class LanguageStats {
         return Languages;
     }
 
-    public static ArrayList<Language> addLanguage2() {
+    public static ArrayList<Language> addLanguageWithSpaces() {
 
 
-        Language Svenska2 = new Language(FileInput.readFile("Svenska.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "Swedish");
-        Language English2 = new Language(FileInput.readFile("English.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "English");
-        Language Suomi2 = new Language(FileInput.readFile("Suomi.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "Finnish");
-        Language Deutsch2 = new Language(FileInput.readFile("Deutch.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "Deutsch");
-        Language Eesti2 = new Language(FileInput.readFile("Eesti.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "Eesti");
-        Language Frenc2 = new Language(FileInput.readFile("Francais.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "French");
-        Language Italian2 = new Language(FileInput.readFile("Italiano.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "Italian");
-        Language Norwegian2 = new Language(FileInput.readFile("Norsk.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "Norwegian");
-        System.out.println(Svenska2.getContent());
+        Language Svenska2 = new Language(FileInput.readFile("Svenska.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]", "").replaceAll("\\s+", " ").toLowerCase(), "Swedish");
+        Language English2 = new Language(FileInput.readFile("English.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]", "").replaceAll("\\s+", " ").toLowerCase(), "English");
+        Language Suomi2 = new Language(FileInput.readFile("Suomi.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]", "").replaceAll("\\s+", " ").toLowerCase(), "Finnish");
+        Language Deutsch2 = new Language(FileInput.readFile("Deutch.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]", "").replaceAll("\\s+", " ").toLowerCase(), "Deutsch");
+        Language Eesti2 = new Language(FileInput.readFile("Eesti.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]", "").replaceAll("\\s+", " ").toLowerCase(), "Eesti");
+        Language Frenc2 = new Language(FileInput.readFile("Francais.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]", "").replaceAll("\\s+", " ").toLowerCase(), "French");
+        Language Italian2 = new Language(FileInput.readFile("Italiano.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]", "").replaceAll("\\s+", " ").toLowerCase(), "Italian");
+        Language Norwegian2 = new Language(FileInput.readFile("Norsk.txt").replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]", "").replaceAll("\\s+", " ").toLowerCase(), "Norwegian");
+
         LanguagesWithSpaces.add(Svenska2);
         LanguagesWithSpaces.add(English2);
         LanguagesWithSpaces.add(Suomi2);
@@ -60,15 +60,34 @@ public class LanguageStats {
         return LanguagesWithSpaces;
     }
 
-    public static void guessLanguage() {
+    public static HashMap<String, Double> sortByValue(HashMap<String, Double> hm) {
 
+        List<Map.Entry<String, Double>> list =
+                new LinkedList<Map.Entry<String, Double>>(hm.entrySet());
+
+
+        Collections.sort(list, new Comparator<Map.Entry<String, Double>>() {
+            public int compare(Map.Entry<String, Double> o1,
+                               Map.Entry<String, Double> o2) {
+                return (o1.getValue()).compareTo(o2.getValue());
+            }
+        });
+
+
+        HashMap<String, Double> temp = new LinkedHashMap<String, Double>();
+        for (Map.Entry<String, Double> aa : list) {
+            temp.put(aa.getKey(), aa.getValue());
+        }
+        return temp;
+    }
+
+    public static void guessLanguage() {
 
         DecimalFormat df = new DecimalFormat();
         df.setMaximumFractionDigits(3);
-        Formatter f = new Formatter();
         ArrayList<Language> guessArray = addLanguage();
         ArrayList<Language> guessArray2 = addLanguage();
-        ArrayList<Language> guessArray3 = addLanguage2();
+        ArrayList<Language> guessArray3 = addLanguageWithSpaces();
         LinkedHashMap<String, Double> resultHash = new LinkedHashMap<>();
         LinkedHashMap<String, Double> resultHash2 = new LinkedHashMap<>();
         LinkedHashMap<String, Double> resultHash3 = new LinkedHashMap<>();
@@ -89,7 +108,7 @@ public class LanguageStats {
 
         //User input skapas som en language
         Language userinL = new Language(userlangIn.replaceAll("[\\PL]", "").toLowerCase(), "unknown");
-        Language UserinLWithSpaces = new Language(userlangIn.replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]","").replaceAll("\\s+", " ").toLowerCase(), "unknown");
+        Language UserinLWithSpaces = new Language(userlangIn.replaceAll("[;\\[0-9:*?\"<>|&',.()«-]", "").replaceAll("\\]", "").replaceAll("\\s+", " ").toLowerCase(), "unknown");
 
 
         for (int i = 0; i < guessArray.size(); i++) {
@@ -114,15 +133,6 @@ public class LanguageStats {
 
         }
 
-        for (HashMap.Entry entry : resultHash.entrySet()) {
-            //System.out.println("All letter algo: \n"  + entry.getKey() + " " + entry.getValue() + " \n");
-            resultLanguage.put(entry.getKey(),df.format(entry.getValue()));
-
-        }
-
-
-        System.out.format("Analys 1: \n" + resultHash + " \n" + resultLanguage + " \n");
-        resultLanguage.clear();
 
         for (int i = 0; i < guessArray2.size(); i++) {
 
@@ -141,17 +151,6 @@ public class LanguageStats {
             resultHash2.put(guessArray2.get(i).getLanguageLabel(), totalDiff2);
             totalDiff2 = 0;
         }
-
-        for (HashMap.Entry entry : resultHash2.entrySet()) {
-            //System.out.println("Three Letter algo: \n" + entry.getKey() + " " + df.format(entry.getValue()) + " \n");
-            resultLanguage.put(entry.getKey(), df.format(entry.getValue()));
-        }
-
-        //System.out.println("Analys 2: \n" + resultLanguage + " \n");
-        resultLanguage.clear();
-
-        //for resulthash2
-
 
 
         //FirstLetterOfEachWord
@@ -177,32 +176,24 @@ public class LanguageStats {
 
         }
 
-        for (HashMap.Entry entry : resultHash3.entrySet()) {
-            //System.out.println("First Letter algo: \n" + entry.getKey() + " " + entry.getValue() + " \n");
-            resultLanguage.put(entry.getKey(), df.format(entry.getValue()));
-        }
 
-       // System.out.println(df.format("Analys 3: \n" + resultLanguage + " \n"));
-        resultLanguage.clear();
-
-
+        HashMap<String, Double> finalHash = new HashMap<>();
         for (HashMap.Entry entry : resultHash.entrySet()) {
-           double total = ((double) entry.getValue() +resultHash2.get(entry.getKey()) + resultHash3.get(entry.getKey())) /3;
-            System.out.println(total);
-
-
-            System.out.println(entry.getKey());
-            //double hej = entry.getValue(), hejdå, hejigen;
-            //System.out.println("Three Letter algo: \n" + entry.getKey() + " " + df.format(entry.getValue()) + " \n");
-            System.out.println("analys 1: "+df.format(entry.getValue()));
-            System.out.println("analys 2:"+df.format(resultHash2.get(entry.getKey())));
-            System.out.println("analys 3:"+df.format(resultHash3.get(entry.getKey())));
-
-            System.out.println("-----------------------------------------");
+            double total = ((double) entry.getValue() + resultHash2.get(entry.getKey()) + resultHash3.get(entry.getKey())) / 3;
+            finalHash.put(entry.getKey().toString(), total);
         }
+
+        HashMap<String, Double> moreFinalHash = sortByValue(finalHash);
+        int i = 1;
+        System.out.println("-------------------------------------------------------------------------------------------");
+        for (HashMap.Entry entry : moreFinalHash.entrySet()) {
+            System.out.println(entry.getKey() + " Analys 1: " + df.format(resultHash.get(entry.getKey())) + " Analys 2: " + df.format(resultHash2.get(entry.getKey())) + " Analys 3: " + df.format(resultHash3.get(entry.getKey())) + " Kombinerat: " + df.format(entry.getValue()) + " Rangordning " + i);
+            i++;
+        }
+        System.out.println("-------------------------------------------------------------------------------------------");
+
 
     }
-
 }
 
 

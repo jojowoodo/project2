@@ -15,7 +15,6 @@ public class Language {
     HashMap<String, Double> firstLetterResult = new HashMap<>();
 
 
-
     public Language(String c, String l) {
 
         content = c;
@@ -60,29 +59,15 @@ public class Language {
             threeLetters.add(result);
             j++;
         }
-       threeLetterResult = getCharDistritubtion(threeLetters);
+        threeLetterResult = getCharDistritubtion(threeLetters);
 
         return threeLetterResult;
     }
 
     public HashMap<String, Double> calculateCharDistributionFirstLetter(String inputString) {
-            ArrayList<String> firstLetter = new ArrayList<>();
+        ArrayList<String> firstLetter = new ArrayList<>();
         String text = inputString;
 
-
-       /* char a[] = s.toCharArray();
-
-        for(int i=0; i < a.length; i++) {
-            if(a[i] != ' ' && (i == 0 || a[i-1] == ' ')) {
-                //System.out.println(a[i]);
-                String result = " " + a[i];
-                //System.out.println(a[i]);
-                firstLetter.add(result);
-                System.out.println(result);
-                a[i]++;
-                System.out.println(a[i]);
-            }
-        } */
 
         String[] g = text.split(" ");
         for (int i = 0; i < g.length; i++) {
@@ -90,18 +75,13 @@ public class Language {
             firstLetter.add(String.valueOf(s.charAt(0)));
         }
 
-      //  for(int i = 0; i < firstLetter.size(); i++){
-          //  System.out.println(firstLetter.get(i));
-       // }
-
-
 
         firstLetterResult = getCharDistritubtion(firstLetter);
 
         return firstLetterResult;
     }
 
-    public HashMap<String,Double> getCharDistritubtion(ArrayList<String> charArray) {
+    public HashMap<String, Double> getCharDistritubtion(ArrayList<String> charArray) {
         Double total = 0.0;
         for (int i = 0; i < charArray.size(); i++) {
 
@@ -118,12 +98,9 @@ public class Language {
 
         for (HashMap.Entry entry : CountMap.entrySet()) {
             Double temp = (Double) entry.getValue();
-            CountResult.put(entry.getKey().toString(), temp /  total);
+            CountResult.put(entry.getKey().toString(), temp / total);
         }
 
-       //for (HashMap.Entry entry : CountResult.entrySet()) {
-          //  System.out.println(entry.getKey() + " " + entry.getValue());
-       // }
         return CountResult;
     }
 
