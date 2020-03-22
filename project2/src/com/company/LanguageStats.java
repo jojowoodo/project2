@@ -64,7 +64,7 @@ public class LanguageStats {
 
 
         DecimalFormat df = new DecimalFormat();
-        df.setMaximumFractionDigits(2);
+        df.setMaximumFractionDigits(3);
         Formatter f = new Formatter();
         ArrayList<Language> guessArray = addLanguage();
         ArrayList<Language> guessArray2 = addLanguage();
@@ -187,13 +187,16 @@ public class LanguageStats {
 
 
         for (HashMap.Entry entry : resultHash.entrySet()) {
+           double total = ((double) entry.getValue() +resultHash2.get(entry.getKey()) + resultHash3.get(entry.getKey())) /3;
+            System.out.println(total);
+
 
             System.out.println(entry.getKey());
             //double hej = entry.getValue(), hejdå, hejigen;
             //System.out.println("Three Letter algo: \n" + entry.getKey() + " " + df.format(entry.getValue()) + " \n");
-            System.out.println(df.format(entry.getValue()));
-            System.out.println(df.format(resultHash2.get(entry.getKey())));
-            System.out.println(df.format(resultHash3.get(entry.getKey())));
+            System.out.println("analys 1: "+df.format(entry.getValue()));
+            System.out.println("analys 2:"+df.format(resultHash2.get(entry.getKey())));
+            System.out.println("analys 3:"+df.format(resultHash3.get(entry.getKey())));
 
             System.out.println("-----------------------------------------");
         }
