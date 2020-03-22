@@ -71,7 +71,7 @@ public class Language {
             ArrayList<String> firstLetter = new ArrayList<>();
         String s = inputString;
 
-        char a[] = s.toCharArray();
+       /* char a[] = s.toCharArray();
 
         for(int i=0; i < a.length; i++) {
             if(a[i] != ' ' && (i == 0 || a[i-1] == ' ')) {
@@ -79,9 +79,22 @@ public class Language {
                 String result = " " + a[i];
                 //System.out.println(a[i]);
                 firstLetter.add(result);
+                System.out.println(result);
                 a[i]++;
             }
+        } */
+
+        for (String g : s.split(" ")) {
+            char a = g.charAt(0);
+            String b = String.valueOf(a);
+            firstLetter.add(b);
         }
+        for(int i = 0; i < firstLetter.size(); i++){
+            System.out.println(firstLetter.get(i));
+        }
+
+
+
         firstLetterResult = getCharDistritubtion(firstLetter);
 
         return firstLetterResult;
