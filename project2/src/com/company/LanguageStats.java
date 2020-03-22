@@ -3,7 +3,7 @@ package com.company;
 import java.awt.image.AreaAveragingScaleFilter;
 import java.text.DecimalFormat;
 import java.util.*;
-
+import java.util.Formatter;
 public class LanguageStats {
 
     public static ArrayList<Language> Languages = new ArrayList();
@@ -153,7 +153,7 @@ public class LanguageStats {
         //for resulthash2
         for (HashMap.Entry entry : resultHash.entrySet()) {
             System.out.println(entry.getKey());
-            double hej = entry.getValue(), hejdå, hejigen;
+            //double hej = entry.getValue(), hejdå, hejigen;
             //System.out.println("Three Letter algo: \n" + entry.getKey() + " " + df.format(entry.getValue()) + " \n");
             System.out.println(df.format(entry.getValue()));
             System.out.println(df.format(resultHash2.get(entry.getKey())));

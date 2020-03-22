@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29aa0780-d5c7-4d40-a7c7-097aa91d2129" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Language.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj 2 v.2/com/company/Language.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project2/src/com/company/LanguageStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/project2/src/com/company/LanguageStats.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -293,7 +291,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixa till att alla languages läses in i main;" />
     <MESSAGE value="getContent i Language" />
     <MESSAGE value="fixade alla språks variabler och regex allt utom unicode" />
     <MESSAGE value="kommer nu ut en lista på alla bokstäver, räkna totala mängden bokstäver next och sedan fördelningen" />
@@ -318,7 +315,8 @@
     <MESSAGE value="Lagt till en halvt fungerande first letter combination" />
     <MESSAGE value="Fått den att printa ut en hashmap där resultaten sparas." />
     <MESSAGE value="Ändra så att de fungerar på alla språk" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ändra så att de fungerar på alla språk" />
+    <MESSAGE value="en början på tabeller?" />
+    <option name="LAST_COMMIT_MESSAGE" value="en början på tabeller?" />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583220637134">
